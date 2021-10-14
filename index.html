@@ -1,342 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <title>E-Shop</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/57602022a0.js" crossorigin="anonymous"></script>
+  <title>E-Shop</title>
 </head>
 <body>
-    <header>
-        <nav class="top-nav">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <img src="" alt="" class="top-nav_logo">
+  <header>
+    <nav class="top-nav">
+      <div class="container">
+        <div class="row">
+          <div class="top-nav-left">
+            <a href="#">
+              <img src="images/noun_cloth_2129414.png" alt="logo" class="top-nav_logo">
+              <span>E-Shop</span>
+            </a>
+          </div>
+          
+          <ul class="top-nav-center">
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Kids</a></li>
+          </ul>
+          <div class="top-nav-right">
+            <a href="#"><i class="fas fa-search"></i></a>
+            <a href="#"><i class="fas fa-cart-plus"></i></a>
+            <a href="#"><i class="far fa-user"></i></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-text">
+          <p>Sale of the summer collection</p>
+        </div>
+        <div class="hero-button">
+          <a href=""></a>
+          <a href="">SHOP NOW</a>
+        </div>
+      </div>
+    </section>
+    <section class="intro">
+      <div class="container">
+        <ul class="intro-list">
+          <li class="intro-ship">
+            <div class="intro-btn">
+              <a href=""></a>
+            </div>
+            <div class="intro-content">
+              <p>Free Shipping</p>
+              <p>On purchases over $199</p>
+            </div>
+          </li>
+          <li class="intro-ship">
+            <div class="intro-btn">
+              <a href=""></a>
+            </div>
+              <div class="intro-content">
+                <p>99% Satisfied Customers</p>
+                <p>Our clients's opinions speak for themselves</p>
+              </div>
+          </li>
+          <li class="intro-ship">
+            <div class="intro-btn">
+              <a href=""></a>
+            </div>
+            <div class="intro-content">
+              <p>Originality Guaranteed</p>
+              <p>30 days warranty for each product from our store</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </header>
+  <main>
+    <section class="intro-info-product">
+      <div class="container">
+        <div class="row">
+          <div class="col col-6">
+            <p>New arrivalsare now in!</p>
+            <a href="">SHOW COLLECTION</a>
+          </div>
+          <div class="col col-3">
+            <p>Basic t-shirts</p>
+            <p>$29.99</p>
+            <a href="">MORE DETAILS</a>
+          </div>
+          <div class="col col-3">
+            <p>-50%</p>
+            <p>Sale this summer</p>
+            <a href="">VIEW ALL</a>
+          </div>
+        </div>
+      </div>
+    </section>
+      <article class="show-product-select">
+        <div class="container">
+          <div class="top-product-select">
+            <span>Selected just for you</span>
+            <button>SHOW MORE</button>
+          </div>
+          <div class="product">
+            <ul class="product-list">
+              <li class="product-item">
+                <a href="">
+                  <div class="product-img">
+                    <span class="discount">-30%</span>
+                    <img src="images/image.png" alt="image-product">
+                  </div>
+                  <div class="product-info">
+                    <p class="produt-name">T-shirt Summer Viber</p>
+                    <span class="product-price-sale">$89.99</span>
+                    <span class="product-price">$119.99</span>
+                  </div>
+                </a>
+              </li>
+              <li class="product-item">
+                <a href="">
+                  <div class="product-img">
+                    <img src="images/image-2.png" alt="image-product">
+                  </div>
+                  <div class="product-info">
+                    <p class="produt-name">Loose Knit 3/4 Sleeve</p>
+                    <span class="product-price">$119.99</span>
+                  </div>
+                </a>
+              </li>
+                <li class="product-item">
+									<a href="">
+										<div class="product-img">
+											<img src="images/image-3.png" alt="image-product">
+										</div>
+										<div class="product-info">
+											<p class="produt-name">T-shirt Summer Viber</p>
+											<span class="product-price">$79.99</span>
+										</div>
+									</a>
+                </li>
+                <li class="product-item">
+									<a href="">
+										<div class="product-img">
+											<img src="images/image-4.png" alt="image-product">
+										</div>
+										<div class="product-info">
+											<p class="produt-name">Loose Textured T-Shirt</p>
+											<span class="product-price">$119.99</span>
+										</div>
+									</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <section class="reason">
+				<p>Why should you choose us?</p>
+				<div class="card-reason">
+					<ul class="card-reason-list">
+						<li class="card-reason-ship">
+              <div class="card-reason-btn">
+                <img src="images/Group 181.svg" alt="icon-group">
+              </div>
+              <div class="card-reason-content">
+                <p>Free Shipping</p>
+                <p>All purchases over $199 are eligible forfree shipping via USPS First Class Mail.</p>
+              </div>
+						</li>
+						<li class="card-reason-ship">
+              <div class="card-reason-btn">
+                <img src="images/noun_payment_2281176.png" alt="icon-payment">
+              </div>
+              <div class="card-reason-content">
+                <p>Easy Payments</p>
+                <p>All payments are processed instantlyover a secure payment protocol.</p>
+              </div>
+						</li>
+						<li class="card-reason-ship">
+              <div class="card-reason-btn">
+                <img src="images/noun_guarantee_2519048.svg" alt="icon-noun_guarantee">
+              </div>
+              <div class="card-reason-content">
+                <p>Money-Back Guarantee</p>
+                <p>If an item arrived damaged or you'vechanged your mind, you can send itback for a full refund.</p>
+              </div>
+						</li>
+						<li class="card-reason-ship">
+              <div class="card-reason-btn">
+                <img src="images/noun_materials_308312.png" alt="icon-materials">
+              </div>
+              <div class="card-reason-content">
+                <p>Finest Quality</p>
+                <p>Designed to last, each of our products hasbeen crafted with the finest materials.</p>
+              </div>
+						</li>   
+					</ul>
+				</div>
+      </section>
+      <article class="show-product-today">
+        <div class="container">
+          <p class="title">Products in today</p>
+          <div class="product">
+            <ul class="product-list">
+              <li class="product-item">
+                <a href="">
+                  <div class="product-img">
+                    <span class="discount">-30%</span>
+                    <img src="images/image.png" alt="image-product">
+                  </div>
+                  <div class="product-info">
+                    <p class="produt-name">T-shirt Summer Viber</p>
+                    <span class="product-price-sale">$89.99</span>
+                    <span class="product-price">$119.99</span>
+                  </div>
+                </a>
+              </li>
+                <li class="product-item">
+                  <a href="">
+                    <div class="product-img">
+                      <img src="images/image-2.png" alt="image-product">
                     </div>
-                    <div class="col">
-                        <ul class="top-nav_menu">
-                            <li><a href="">Men</a></li>
-                            <li><a href="">Women</a></li>
-                            <li><a href="">Kids</a></li>
-                        </ul>
+                    <div class="product-info">
+                      <p class="produt-name">T-shirt Summer Viber</p>
+                      <span class="product-price">$119.99</span>
                     </div>
-                    <div class="col">
-                        <div class="top-nav_search"><i></i></div>
-                        <div class="top-nav_cart"><i></i></div>
-                        <div class="top-nav_account"><i></i></div>
+                  </a>
+                </li>
+                <li class="product-item">
+                  <a href="">
+                    <div class="product-img">
+                      <span class="discount">-30%</span>
+                      <img src="images/image-3.png" alt="image-product">
                     </div>
-                </div>
-            </div>
-        </nav>
-        <section class="hero">
-            <div class="container">
-                <div class="hero-text">
-                    <p>Sale of the summer collection</p>
-                </div>
-                <div class="hero-button">
-                    <a href=""></a>
-                    <a href="">SHOP NOW</a>
-                </div>
-            </div>
-        </section>
-        <section class="intro">
-            <div class="container">
-                <ul class="intro-list">
-                    <li class="intro-ship">
-                        <div class="intro-btn">
-                            <a href=""></a>
-                        </div>
-                        <div class="intro-content">
-                            <p>Free Shipping</p>
-                            <p>On purchases over $199</p>
-                        </div>
-                    </li>
-                    <li class="intro-ship">
-                        <div class="intro-btn">
-                            <a href=""></a>
-                        </div>
-                        <div class="intro-content">
-                            <p>99% Satisfied Customers</p>
-                            <p>Our clients's opinions speak for themselves</p>
-                        </div>
-                    </li>
-                    <li class="intro-ship">
-                        <div class="intro-btn">
-                            <a href=""></a>
-                        </div>
-                        <div class="intro-content">
-                            <p>Originality Guaranteed</p>
-                            <p>30 days warranty for each product from our store</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-    </header>
-    <main>
-        <section class="intro-info-product">
-            <div class="container">
-                <div class="row">
-                    <div class="col col-6">
-                        <p>New arrivalsare now in!</p>
-                        <a href="">SHOW COLLECTION</a>
+                    <div class="product-info">
+                      <p class="produt-name">Basic Slim Fit T-Shirt</p>
+                      <span class="product-price">$79.99</span>
                     </div>
-                    <div class="col col-3">
-                        <p>Basic t-shirts</p>
-                        <p>$29.99</p>
-                        <a href="">MORE DETAILS</a>
+                  </a>
+                </li>
+                <li class="product-item">
+                  <a href="">
+                    <div class="product-img">
+                      <img src="images/image-4.png" alt="image-product">
                     </div>
-                    <div class="col col-3">
-                        <p>-50%</p>
-                        <p>Sale this summer</p>
-                        <a href="">VIEW ALL</a>
+                    <div class="product-info">
+                      <p class="produt-name">Loose Textured T-Shirt</p>
+                      <span class="product-price">$119.99</span>
                     </div>
-                </div>
+                  </a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <div class="footer-subcribe">
+      <div class="container">
+        <div class="footer-subcribe-left">
+          <p>Subscribe to our newsletter andreceive exclusive offers every week</p>
+        </div>
+        <div class="footer-subcribe-right">
+          <input type="text" name="" id="" placeholder="Enter your email">
+          <button>SUBSCRIBE</button>
+        </div>
+        </div>
+    </div>
+    <div class="footer-contact">
+      <div class="container">
+        <div class="footer-contact-shop">
+          <div class="footer-contact-shop-logo">
+            <a href="#">
+              <img src="images/noun_cloth_2129414.png" alt="logo">
+              <span>E-Shop</span>
+            </a>
+          </div>
+            <div class="footer-contact-shop-content">
+              <p>House My Brand designs clothing for the young, the old &everyone in between – but most importantly, for the fashionable</p>
             </div>
-        </section>
-        <article class="show-product-select">
-            <div class="container">
-                <div class="top-product-select">
-                    <span>Selected just for you</span>
-                    <button>SHOW MORE</button>
-                </div>
-                <div class="product">
-                    <ul class="product-list">
-                        <li class="product-item">
-                            <a href="">
-                                <div class="product-img">
-                                    <span class="discount">-30%</span>
-                                    <img src="" alt="">
-                                </div>
-                                <div class="product-info">
-                                    <p class="produt-name">T-shirt Summer Viber</p>
-                                    <span class="product-price-sale">$89.99</span>
-                                    <span class="product-price">$119.99</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="product-item">
-                            <a href="">
-                                <div class="product-img">
-                                    <span class="discount">-30%</span>
-                                    <img src="" alt="">
-                                </div>
-                                <div class="product-info">
-                                    <p class="produt-name">T-shirt Summer Viber</p>
-                                    <span class="product-price-sale">$89.99</span>
-                                    <span class="product-price">$119.99</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="product-item">
-                            <a href="">
-                                <div class="product-img">
-                                    <span class="discount">-30%</span>
-                                    <img src="" alt="">
-                                </div>
-                                <div class="product-info">
-                                    <p class="produt-name">T-shirt Summer Viber</p>
-                                    <span class="product-price-sale">$89.99</span>
-                                    <span class="product-price">$119.99</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="product-item">
-                            <a href="">
-                                <div class="product-img">
-                                    <span class="discount">-30%</span>
-                                    <img src="" alt="">
-                                </div>
-                                <div class="product-info">
-                                    <p class="produt-name">T-shirt Summer Viber</p>
-                                    <span class="product-price-sale">$89.99</span>
-                                    <span class="product-price">$119.99</span>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </article>
-        <section class="reason">
-            <p>Why should you choose us?</p>
-            <div class="card-reason">
-                <ul class="card-reason-list">
-                    <li class="card-reason-ship">
-                        <div class="card-reason-btn">
-                            <a href=""></a>
-                        </div>
-                        <div class="card-reason-content">
-                            <p>Free Shipping</p>
-                            <p>All purchases over $199 are eligible forfree shipping via USPS First Class Mail.</p>
-                        </div>
-                    </li>
-                    <li class="card-reason-ship">
-                        <div class="card-reason-btn">
-                            <a href=""></a>
-                        </div>
-                        <div class="card-reason-content">
-                            <p>Easy Payments</p>
-                            <p>All payments are processed instantlyover a secure payment protocol.</p>
-                        </div>
-                    </li>
-                    <li class="card-reason-ship">
-                        <div class="card-reason-btn">
-                            <a href=""></a>
-                        </div>
-                        <div class="card-reason-content">
-                            <p>Money-Back Guarantee</p>
-                            <p>If an item arrived damaged or you'vechanged your mind, you can send itback for a full refund.</p>
-                        </div>
-                    </li>
-                    <li class="card-reason-ship">
-                        <div class="card-reason-btn">
-                            <a href=""></a>
-                        </div>
-                        <div class="card-reason-content">
-                            <p>Finest Quality</p>
-                            <p>Designed to last, each of our products hasbeen crafted with the finest materials.</p>
-                        </div>
-                    </li>   
-                </ul>
-            </div>
-        </section>
-        <article class="show-product-today">
-            <div class="container">
-                <p class="title">Products in today</p>
-                <div class="product">
-                    <ul class="product-list">
-                        <li class="product-item">
-                            <a href="">
-                                <div class="product-img">
-                                    <span class="discount">-30%</span>
-                                    <img src="" alt="">
-                                </div>
-                                <div class="product-info">
-                                    <p class="produt-name">T-shirt Summer Viber</p>
-                                    <span class="product-price-sale">$89.99</span>
-                                    <span class="product-price">$119.99</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="product-item">
-                            <a href="">
-                                <div class="product-img">
-                                    <span class="discount">-30%</span>
-                                    <img src="" alt="">
-                                </div>
-                                <div class="product-info">
-                                    <p class="produt-name">T-shirt Summer Viber</p>
-                                    <span class="product-price-sale">$89.99</span>
-                                    <span class="product-price">$119.99</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="product-item">
-                            <a href="">
-                                <div class="product-img">
-                                    <span class="discount">-30%</span>
-                                    <img src="" alt="">
-                                </div>
-                                <div class="product-info">
-                                    <p class="produt-name">T-shirt Summer Viber</p>
-                                    <span class="product-price-sale">$89.99</span>
-                                    <span class="product-price">$119.99</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="product-item">
-                            <a href="">
-                                <div class="product-img">
-                                    <span class="discount">-30%</span>
-                                    <img src="" alt="">
-                                </div>
-                                <div class="product-info">
-                                    <p class="produt-name">T-shirt Summer Viber</p>
-                                    <span class="product-price-sale">$89.99</span>
-                                    <span class="product-price">$119.99</span>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </article>
-    </main>
-    <footer>
-        <div class="footer-subcribe">
-            <div class="container">
-                <div class="footer-subcribe-left">
-                    <p>Subscribe to our newsletter andreceive exclusive offers every week</p>
-                </div>
-                <div class="footer-subcribe-right">
-                    <input type="text" name="" id="">
-                    <button>SUBSCRIBE</button>
-                </div>
+            <div class="footer-contact-shop-social">
+              <ul class="social-list">
+                <li class="social-item">
+                  <a href=""><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li class="social-item">
+                  <a href=""><i class="fab fa-twitter"></i></a>
+                </li>
+                <li class="social-item">
+                  <a href=""><i class="fab fa-linkedin-in"></i></i></a>
+                </li>
+                <li class="social-item">
+                  <a href=""><i class="fab fa-instagram"></i></a>
+                </li>
+                <li class="social-item">
+                  <a href=""><i class="fab fa-youtube"></i></a>
+                </li>
+              </ul>
             </div>
         </div>
-        <div class="footer-contact">
-            <div class="container">
-                <div class="footer-contact-shop">
-                    <div class="footer-contact-shop-logo">
-                        <img src="" alt="">
-                        <p>E-Shop</p>
-                    </div>
-                    <div class="footer-contact-shop-content">
-                        <p>House My Brand designs clothing for the young, the old &everyone in between – but most importantly, for the fashionable</p>
-                    </div>
-                    <div class="footer-contact-shop-social">
-                        <ul class="social-list">
-                            <li class="social-item">
-                                <a href=""></a>
-                            </li>
-                            <li class="social-item">
-                                <a href=""></a>
-                            </li>
-                            <li class="social-item">
-                                <a href=""></a>
-                            </li>
-                            <li class="social-item">
-                                <a href=""></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer-contact-shop-online">
-                    <p class="title-contact">
-                        Shopping online
-                    </p>
-                    <a href="">Order Status</a>
-                    <a href="">Shipping and Delivery </a>
-                    <a href="">Returns</a>
-                    <a>Payment Options</a>
-                    <a>Contact Us</a>
-                </div>
-                <div class="footer-contact-information">
-                    <p class="title-contact">
-                        Information
-                    </p>
-                    <a href="">Gift Cards</a>
-                    <a href="">Find a store</a>
-                    <a href="">Newsletter</a>
-                    <a href="">Bacome a member</a>
-                    <a href="">Site feedback</a>
-                </div>
-                <div class="footer-contact-detail">
-                    <p class="title-contact">
-                        Contact
-                    </p>
-                    <p>store@uikit.com </p>
-                    <p>Hotline: +1 131 138 138</p>
-                </div>
-                
-            </div>
+        <div class="footer-contact-shop-online">
+          <p class="title-contact">
+              Shopping online
+          </p>
+          <a href="">Order Status</a>
+          <a href="">Shipping and Delivery </a>
+          <a href="">Returns</a>
+          <a>Payment Options</a>
+          <a>Contact Us</a>
         </div>
-        <div class="footer-design-by">
-            <p>DESIGN BY ICEO.CO - © 2019. ALL RIGHTS RESERVED.</p>
+        <div class="footer-contact-information">
+          <p class="title-contact">
+              Information
+          </p>
+          <a href="">Gift Cards</a>
+          <a href="">Find a store</a>
+          <a href="">Newsletter</a>
+          <a href="">Bacome a member</a>
+          <a href="">Site feedback</a>
         </div>
-    </footer>
+        <div class="footer-contact-detail">
+          <p class="title-contact">
+              Contact
+          </p>
+          <p>store@uikit.com </p>
+          <p>Hotline: +1 131 138 138</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-design-by">
+      <p>DESIGN BY ICEO.CO - © 2019. ALL RIGHTS RESERVED.</p>
+    </div>
+  </footer>
 </body>
 </html>
