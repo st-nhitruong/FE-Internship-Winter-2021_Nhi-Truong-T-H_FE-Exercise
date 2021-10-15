@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/57602022a0.js" crossorigin="anonymous"></script>
   <title>E-Shop</title>
 </head>
 <body>
@@ -48,81 +47,87 @@
   <main>
     <!-- Section banner -->
     <section class="section section-banner">
-      <div class="banner-content">
-        <h2>Sale of the summer collection</h2>
-        <a href="#">
-          <img src="images/arrow.png" alt="icon-go">
-          shop now
-        </a>
+      <div class="banner">
+        <img src="images/banner.png" alt="banner" class="banner-image">
+        <div class="banner-content">
+          <h2>Sale of the <span class="txt-active">summer</span> collection</h2>
+          <a href="#" class="banner-link">
+            <img src="images/arrow.png" alt="shop now">
+            shop now
+          </a>
+        </div>
       </div>
-      <div class="benifit">
-        <ul class="benifit-list">
-          <li class="benifit-item">
-            <span>
-              <img src="images/shipping1.png" alt="shipping">
-            </span>
-            <div class="benifit-content">
-              <p class="benifit-title">Free Shipping</p>
-              <p>On purchases over $199</p>
+      <div class="benefit">
+        <ul class="benefit-list">
+          <li class="benefit benefit-horizontal">
+            <img src="images/shipping1.png" class="benefit-img" alt="shipping">
+            <div class="benefit-content">
+              <h4 class="benefit-title">Free Shipping</h4>
+              <p class="benefit-description">On purchases over $199</p>
             </div>
           </li>
-          <li class="benifit-item">
-            <span>
-              <img src="images/smile.png" alt="smile">
-            </span>
-            <div class="benifit-content">
-              <p class="benifit-title">99% Satisfied Customers</p>
-              <p>Our clients's opinions speak for themselves</p>
+          <li class="benefit benefit-horizontal">
+            <img src="images/smile.png" class="benefit-img" alt="smile">
+            <div class="benefit-content">
+              <h4 class="benefit-title">99% Satisfied Customers</h4>
+              <p class="benefit-description">Our clients's opinions speak for themselves</p>
             </div>
           </li>
-          <li class="benifit-item">
-            <span>
-              <img src="images/guaranteed.png" alt="money">
-            </span>
-            <div class="benifit-content">
-              <p class="benifit-title">Originality Guaranteed</p>
-              <p>30 days warranty for each product from our store</p>
+          <li class="benefit benefit-horizontal">
+            <img src="images/guaranteed.png" class="benefit-img" alt="money">
+            <div class="benefit-content">
+              <h4 class="benefit-title">Originality Guaranteed</h4>
+              <p class="benefit-description">30 days warranty for each product from our store</p>
             </div>
           </li>
         </ul>
       </div>
     </section>
-    <section class="section">
+    <!-- Section collection -->
+    <section class="section section-collection">
       <div class="container">
-        <div class="row">
-          <div class="col-6">
-            <h3 class="content-list-collection">New arrivalsare now in!</h3>
-            <a href="">show collection</a>
-          </div>
-          <div class="col-3">
-            <h3 class="content-list-collection">Basic t-shirts $29.99<h3>
-            <a href="">more datails</a>
-          </div>
-          <div class="col-3">
-            <p class="sale-list-collection">-50%</p>
-            <h3 class="content-list-collection">Sale this summer</h3>
-            <a href="">view all</a>
-          </div>
-        </div>
+        <ul class="row card-list">
+          <li class="col col-6 card-item">
+            <div class="card">
+              <img src="#" alt="#" class="card-image">
+              <h3 class="card-title">New arrivalsare now in!</h3>
+              <a href="" class="btn card-link">show collection</a>
+            </div>
+          </li>
+          <li class="col col-3 card-item">
+            <div class="card">
+              <img src="#" alt="#" class="card-image">
+              <h3 class="card-title">Basic t-shirts $29.99</h3>
+              <a href="" class="btn card-link">more datails</a>
+            </div>
+          </li>
+          <li class="col col-3 card-item">
+            <div class="card">
+              <img src="#" alt="#" class="card-image">
+              <h3 class="card-title">Sale this summer</h3>
+              <a href="" class="btn card-link">view all</a>
+              <span class="discount">-50%</span>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
     <!-- Section selected just for you -->
-    <section class="section">
+    <section class="section section-product">
       <div class="container">
-        <div class="section-title">
-          <h3>Selected just for you</h3>
-          <button>show more</button>
-        </div>
-        <div class="product">
-          <ul class="product-list">
-            <li class="product-item">
+        <h3 class="section-title">Selected just for you</h3>
+        <ul class="row">
+            <li class="col col-3">
+              <div class="product">
+
+              </div>
               <a href="#">
                 <div class="product-img">
                   <span class="discount">-30%</span>
                   <img src="images/image.png" alt="image-product">
                 </div>
                 <div class="product-info">
-                  <h3 class="produt-name">T-shirt Summer Viber</h3>
+                  <h3 class="product-title">T-shirt Summer Viber</h3>
                   <span class="product-price-sale">$89.99</span>
                   <span class="product-price">$119.99</span>
                 </div>
@@ -161,12 +166,12 @@
                 </div>
               </a>
             </li>
-          </ul>
-        </div>
+        </ul>
+        <a href="#" class="btn btn-top-right">show more</a>
       </div>
     </section>
     <!-- section why should you choose us?-->
-    <section class="section">
+    <section class="section section-benefit">
       <section class="container">
         <h3 class="section-title">Why should you choose us?</h3>
         <ul class="section-reason-list">
@@ -210,7 +215,7 @@
       </section>
     </section>
     <!-- Section Products in today  -->
-    <section class="section">
+    <section class="section section-product">
       <div class="container">
         <h3 class="section-title">Products in today</h3>
         <div class="product">
@@ -266,14 +271,18 @@
       </div>
     </section>
     <!-- Section newsletter -->
-    <section class="section">
+    <section class="section section-subcribe">
+      <img src="" alt="">
       <div class="container">
         <div class="subcribe-left">
-          <p>Subscribe to our newsletter andreceive exclusive offers every week</p>
+          <h>Subscribe to our newsletter andreceive exclusive offers every week</p>
         </div>
         <div class="subcribe-right">
-          <input type="text" name="" id="" placeholder="Enter your email">
-          <button>subscribe</button>
+          <form action="">
+            <input type="text" name="" id="" placeholder="Enter your email">
+            <button class="btn btn-primary form-btn">subscribe</button>
+          </form>
+          
         </div>
       </div>
     </section>
