@@ -1,0 +1,18 @@
+/* Error: Expected identifier.
+ *   ,
+ * 1 | @include 'header';
+ *   |          ^
+ *   '
+ *   stylesheets\layout\_all.scss 1:10  @import
+ *   stylesheets\style.scss 2:9         root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Expected identifier.\a   \2577 \a 1 \2502  @include 'header';\d\a   \2502           ^\a   \2575 \a   stylesheets\\layout\\_all.scss 1:10  @import\a   stylesheets\\style.scss 2:9         root stylesheet";
+}
