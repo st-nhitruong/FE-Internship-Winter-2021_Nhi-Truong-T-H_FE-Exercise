@@ -1,0 +1,14 @@
+.col {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.col-3{
+    width: 25%;
+}
+.col-4{
+    width: calc(100%/3);
+}
+.col-6{
+    width: 50%;
+    padding: 0 20px;
+}

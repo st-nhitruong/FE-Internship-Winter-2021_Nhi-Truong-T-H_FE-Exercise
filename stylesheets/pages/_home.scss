@@ -1,0 +1,158 @@
+.text-active{
+    color: #FBB03B;
+}
+.section{
+    padding-bottom: 60px;
+}
+.section.section-banner{
+    position: relative;
+    padding-top: 0px;
+}
+.banner{
+    .banner-content{
+        width: 30%;
+        position: absolute;
+        top: 222px;
+        left: 240px;
+        color: #FFFFFF;
+        .banner-title{
+            font-size: 72px;
+            width: 100%;
+            line-height: 101.5%;
+            font-style: normal;
+            font-weight: bold;
+            margin-bottom: 24px;
+        }
+    }
+} 
+.banner-link{
+    display: flex;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    img{
+        width: 36px;
+        height: 36px;
+        margin-right: 10px;
+    }
+}
+.section{
+    width: 100%;
+    padding-top: 48px;
+    padding-bottom: 60px;
+}
+.benefit-img{
+    width: 36px;
+    height: 36px;
+    margin-right: 15px;
+}
+.banner-benefit{
+    display: flex;
+    position: absolute;
+    width: 80%;
+    border-top-right-radius: 100px;
+    background-color: #FFFFFF;
+    padding: 34px;
+    bottom: 7%;
+    padding-left: 15%;  
+}
+.benefit-horizontal{
+    display: flex;
+    flex-direction: row;
+}
+.card-item{
+    position: relative;
+}
+.card-title{
+    position: absolute;
+    top: 168px;
+    left: 40px;
+    color:#FFFFFF;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+}
+.btn-default.card-link{
+    position: absolute;
+    top: 258px;
+    left: 40px;
+}
+.section-product{
+    position: relative;
+}
+.section-title{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 48px;
+    color: #333333;
+    margin-bottom: 40px;
+}
+.product{
+    position: relative;
+}
+.product-title{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #333333;
+}
+.product-price{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #333333;
+}
+.product-price-sale{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FF0000;
+}
+.product-price.original{
+    color: #CECECE;
+    float: right;
+}
+.section-benefit{
+    background-color: #F7F7F7;
+}
+.benefit-description{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: #808080;
+}
+
+.section-subcribe::before{
+    background: linear-gradient(90deg, #000000 33.28%, rgba(0, 0, 0, 0) 94.05%);
+    opacity: 0.7;
+}
+.section-subcribe{
+    position: relative;
+}
+.subcribe-image{
+    position: relative;
+}
+.section-subcribe{
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        z-index: 99;
+    }
+}
+.subcribe-left{
+    width: 50%;
+    font-size: 24px;
+    line-height: 36px;
+    color: #FFFFFF;
+    font-weight: 400;
+}
+.form-input{
+    padding: 14px 64px;
+    border-radius: 61px;
+    background-color: #FFFFFF;
+}
