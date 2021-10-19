@@ -1,22 +1,18 @@
 #### References
-​
 > Describe what it related
 ​
 - [Task/Bug URL]()
 - [Related PR URL]()
 ​
 #### Description
-​
 > Describe what it implement
 > Describe what it changed, added, removed
 ​
 #### Screenshots
-​
 > UI screenshots for Pixel perfect
 > UI screenshots to show what is difference between before and after changing
 ​
 #### Checklist
-​
 > Lưu ý: Kết quả của Pull Request có thể dẫn đến **bad performance** nếu những điều sau đây không được đảm bảo.
 ​
 - [ ] Code đã được build và test ở môi trường local.
