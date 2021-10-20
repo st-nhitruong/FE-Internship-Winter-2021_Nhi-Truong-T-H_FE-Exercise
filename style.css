@@ -40,22 +40,34 @@ img {
     padding: 14px 30px;
     background-color: #FBB03B;
 }
+.btn-top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.btn-outline {
+    border: 1px solid #E5E5E5;
+}
 .badge {
+    position: absolute;
     width: 60px;
     padding: 6px 10px;
     border-radius: 20px;
     text-align: center;
-    background-color: #FF0000;
-    color: #FFFFFF;
 }
-.header, .section-subcribe .container, .footer {
+.badge-danger{
+    color: #FFFFFF;
+    background-color: #FF0000;
+}
+.header-content, .section-subcribe .container, .footer-content {
     display: flex;
 }
 .container {
     max-width: 1152px;
     margin: 0 auto;
+    padding: 0 10px;
 }
-.header.container {
+.header-content {
     width: 100%;
     position: absolute;
     justify-content: space-between;
@@ -75,39 +87,39 @@ img {
     padding: 0 10px;
 }
 .col-1 {
-    width: 8.3333333333%;
+    width: calc(100%/12);
 }
 
 .col-2 {
-    width: 16.6666666667%;
+    width: calc(100%/12*2);
 }
 .col-3 {
     width: 25%;
 }
 .col-4 {
-    width: 33.3333333333%;
+    width: calc(100%/12*4);
 }
 
 .col-5 {
-    width: 41.6666666667%;
+    width: calc(100%/12*5);
 }
 .col-6 {
     width: 50%;
 }
 .col-7 {
-    width: 58.3333333333%;
+    width: calc(100%/12*7);
 }
 .col-8 {
-    width: 66.6666666667%;
+    width: calc(100%/12*8);
 }
 .col-9 {
-    width: 75%;
+    width: calc(100%/12*9);
 }
 .col-10 {
-    width: 83.3333333333%;
+    width: calc(100%/12*10);
 }
 .col-11 {
-    width: 91.6666666667%;
+    width: calc(100%/12*11);
 }
 .col-12 {
     width: 100%;
@@ -129,21 +141,24 @@ img {
 .text-active {
     color: #FBB03B;
 }
-.section{
+.section {
+    width: 100%;
+    padding-top: 48px;
     padding-bottom: 60px;
 }
 .section.section-banner {
     position: relative;
     padding-top: 0px;
 }
-.banner .banner-content {
+.section.section-banner .banner .banner-content {
     width: 30%;
     position: absolute;
     top: 222px;
     left: 240px;
     color: #FFFFFF;
 }
-.banner-content .banner-title {
+
+.section.section-banner .banner .banner-content .banner-title {
     font-size: 72px;
     width: 100%;
     line-height: 101.5%;
@@ -151,29 +166,19 @@ img {
     font-weight: bold;
     margin-bottom: 24px;
 }
-.banner-link {
+.section.section-banner .banner .banner-content .banner-link {
     display: flex;
     color: #FFFFFF;
     font-weight: 700;
     font-size: 24px;
     line-height: 36px;
 }
-.banner-link img {
+.section.section-banner .banner .banner-content .banner-link img {
     width: 36px;
     height: 36px;
     margin-right: 10px;
 }
-.section {
-    width: 100%;
-    padding-top: 48px;
-    padding-bottom: 60px;
-}
-.benefit-img {
-    width: 36px;
-    height: 36px;
-    margin-right: 15px;
-}
-.banner-benefit {
+.section.section-banner .benefit .banner-benefit {
     display: flex;
     position: absolute;
     width: 80%;
@@ -183,14 +188,19 @@ img {
     bottom: 7%;
     padding-left: 15%;  
 }
-.benefit-horizontal {
+.section.section-banner .benefit .banner-benefit .benefit-img, .section-benefit .benefit-img{
+    width: 36px;
+    height: 36px;
+    margin-right: 15px;
+}
+section.section-banner .benefit .banner-benefit .benefit.benefit-horizontal {
     display: flex;
     flex-direction: row;
 }
-.card-item {
+.section-collection .container .card-list .card-item {
     position: relative;
 }
-.card-title {
+.section-collection .container .card-list .card-item .card-title {
     position: absolute;
     top: 168px;
     left: 40px;
@@ -199,18 +209,22 @@ img {
     font-weight: 400;
     line-height: 36px;
 }
-.btn-default.card-link {
+.section-collection .container .card-list .card-item .btn-default.card-link {
     position: absolute;
     top: 258px;
     left: 40px;
 }
+.section-collection .container .card-list .card-item.onsale .badge {
+    top: 128px;
+    left: 40px;
+}
+    
 .section-product .container{
     position: relative;
 }
-.badge-sale {
-    position: absolute;
-    top: 128px;
-    left: 40px;
+.section-product .container .product.onsale .badge{
+    top: 30px;
+    left: 26px;
 }
 .section-title {
     font-style: normal;
@@ -223,50 +237,41 @@ img {
 .product {
     position: relative;
 }
-.badge-discount {
-    position: absolute;
+/* .badge-discount {
     top: 30px;
     left: 26px;
-}
-.product-title {
+} */
+.product .product-title {
     font-size: 16px;
     line-height: 24px;
     font-weight: 300;
     color: #333333;
 }
-.product-price {
+.product .product-price {
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
     color: #333333;
 }
-.product-price-sale {
+.product .product-price-sale {
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
     color: #FF0000;
 }
-.product-price.original {
+.product .product-price.original {
     color: #CECECE;
     float: right;
 }
 .section-benefit {
     background-color: #F7F7F7;
 }
-.benefit-description {
+.section-benefit .benefit-description {
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 21px;
     color: #808080;
-}
-.btn-top-right {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-.btn-outline {
-    border: 1px solid #E5E5E5;
 }
 .section-subcribe::before {
     background: linear-gradient(90deg, #000000 33.28%, rgba(0, 0, 0, 0) 94.05%);
@@ -276,8 +281,8 @@ img {
     position: relative;
     padding: 0;
 }
-.subcribe-img {
-    position: relative;
+.section-subcribe .subcribe-img {
+    vertical-align: bottom;
 }
 .section-subcribe .container {
     position: absolute;
@@ -287,14 +292,14 @@ img {
     transform: translateY(-50%);
     z-index: 99;
 }
-.subcribe-left {
+.section-subcribe .container .subcribe-left {
     width: 50%;
     font-size: 24px;
     line-height: 36px;
     color: #FFFFFF;
     font-weight: 400;
 }
-.form-input {
+.section-subcribe .container .form-input {
     border: none;
     padding: 14px 64px;
     border-radius: 61px;
@@ -306,35 +311,35 @@ footer {
     line-height: 21px;
     color: #FFFFFF;
 }
-.footer-left, .footer-right {
+.footer-content .footer-left, .footer-content .footer-right {
     padding: 40px 0 50px;
     font-size: 14px;
 }
-.logo-footer{
+.footer-content .logo-footer{
     width: auto;
 }
-.footer-left {
+.footer-content .footer-left {
     width: 45%;
     padding-left: 10px;
 }
-.social-list {
+.footer-content .footer-left .social-list {
     display: flex;
 }
-.social-item {
+.footer-content .footer-left .social-list .social-item {
     padding: 56px 10px 0;
 }
-.footer-right {
+.footer-content .footer-right {
     width: 55%;
     display: flex;
 }
-.footer-title {
+.footer-content .footer-right .footer-item {
+    padding-right: 68px;
+}
+.footer-content .footer-right .footer-item .footer-title {
     font-size: 16px;
     padding-bottom: 18px;
 }
-.footer-item {
-    padding-right: 68px;
-}
-.social-link, .list-group-link {
+.footer-content .footer-left .social-list .social-item .social-link, .footer-content .footer-right .footer-item .list-group-link {
     color: #FFFFFF;
 }
 .design-by {
