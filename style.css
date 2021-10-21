@@ -59,7 +59,7 @@ img {
     color: #FFFFFF;
     background-color: #FF0000;
 }
-.header-content, .section-subcribe .container, .footer-content {
+.header-content, .section-subcribe .wrap, .footer-wrap {
     display: flex;
 }
 .container {
@@ -178,7 +178,7 @@ img {
     height: 36px;
     margin-right: 10px;
 }
-.section.section-banner .benefit .banner-benefit {
+.benefit .banner-benefit {
     display: flex;
     position: absolute;
     width: 80%;
@@ -188,19 +188,20 @@ img {
     bottom: 7%;
     padding-left: 15%;  
 }
-.section.section-banner .benefit .banner-benefit .benefit-img, .section-benefit .benefit-img{
+.benefit .banner-benefit .benefit-img, 
+.section-benefit .benefit-img{
     width: 36px;
     height: 36px;
     margin-right: 15px;
 }
-section.section-banner .benefit .banner-benefit .benefit.benefit-horizontal {
+.benefit .banner-benefit .benefit.benefit-horizontal {
     display: flex;
     flex-direction: row;
 }
-.section-collection .container .card-list .card-item {
+.section-collection .wrap .card-list .card-item {
     position: relative;
 }
-.section-collection .container .card-list .card-item .card-title {
+.section-collection .wrap .card-list .card-item .card-title {
     position: absolute;
     top: 168px;
     left: 40px;
@@ -209,22 +210,21 @@ section.section-banner .benefit .banner-benefit .benefit.benefit-horizontal {
     font-weight: 400;
     line-height: 36px;
 }
-.section-collection .container .card-list .card-item .btn-default.card-link {
+.section-collection .wrap .card-list .card-item .btn-default.card-link {
     position: absolute;
     top: 258px;
     left: 40px;
 }
-.section-collection .container .card-list .card-item.onsale .badge {
+.section-collection .wrap .card-list .card-item.onsale .badge {
     top: 128px;
     left: 40px;
 }
-    
-.section-product .container{
-    position: relative;
-}
-.section-product .container .product.onsale .badge{
+.product.onsale .badge {
     top: 30px;
     left: 26px;
+}
+.section-product .wrap {
+    position: relative;
 }
 .section-title {
     font-style: normal;
@@ -280,7 +280,7 @@ section.section-banner .benefit .banner-benefit .benefit.benefit-horizontal {
 .section-subcribe .subcribe-img {
     vertical-align: bottom;
 }
-.section-subcribe .container {
+.section-subcribe .wrap {
     position: absolute;
     align-items: center;
     top: 50%;
@@ -288,14 +288,14 @@ section.section-banner .benefit .banner-benefit .benefit.benefit-horizontal {
     transform: translateY(-50%);
     z-index: 99;
 }
-.section-subcribe .container .subcribe-left {
+.section-subcribe .wrap .subcribe-left {
     width: 50%;
     font-size: 24px;
     line-height: 36px;
     color: #FFFFFF;
     font-weight: 400;
 }
-.section-subcribe .container .form-input {
+.section-subcribe .wrap .form-input {
     border: none;
     padding: 14px 64px;
     border-radius: 61px;
@@ -307,36 +307,37 @@ footer {
     line-height: 21px;
     color: #FFFFFF;
 }
-.footer-content .footer-left, .footer-content .footer-right {
+.footer-wrap a {
+    color: #FFFFFF;
+}
+.footer-wrap .footer-left, 
+.footer-wrap .footer-right {
     padding: 40px 0 50px;
     font-size: 14px;
 }
-.footer-content .logo-footer{
+.footer-wrap .logo-footer{
     width: auto;
 }
-.footer-content .footer-left {
+.footer-wrap .footer-left {
     width: 45%;
     padding-left: 10px;
 }
-.footer-content .footer-left .social-list {
+.footer-wrap .footer-left .social-list {
     display: flex;
 }
-.footer-content .footer-left .social-list .social-item {
+.footer-wrap .footer-left .social-list .social-item {
     padding: 56px 10px 0;
 }
-.footer-content .footer-right {
+.footer-wrap .footer-right {
     width: 55%;
     display: flex;
 }
-.footer-content .footer-right .footer-item {
+.footer-wrap .footer-right .footer-item {
     padding-right: 68px;
 }
-.footer-content .footer-right .footer-item .footer-title {
+.footer-wrap .footer-right .footer-item .footer-title {
     font-size: 16px;
     padding-bottom: 18px;
-}
-.footer-content .footer-left .social-list .social-item .social-link, .footer-content .footer-right .footer-item .list-group-link {
-    color: #FFFFFF;
 }
 .design-by {
     padding: 24px 0;
