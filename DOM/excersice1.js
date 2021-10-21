@@ -1,3 +1,9 @@
+// ## 1. Tính tuổi
+// - Có 1 input để user nhập năm sinh của mình. input có placeholder là "nhập năm sinh"
+// - Có 1 button "Tính tuổi". Khi click vào button này thì tuổi sẽ được tính và điền vào biến x (ở bên dưới).
+// - Có 1 thẻ paragraph show tuổi với nội dung "Tuổi của bạn là: x" (trong đó x là tuổi đã tính được).
+
+
 var input = document.createElement('input');
 var button = document.createElement('button');
 var p = document.createElement('p');
