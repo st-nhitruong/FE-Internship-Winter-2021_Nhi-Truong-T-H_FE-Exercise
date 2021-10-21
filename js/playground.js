@@ -81,4 +81,4 @@ function findNumbers(str,a){
     }
     return arr;
 }
-console.log(findNumbers('1234567890*',6))
+// console.log(findNumbers('1234567890*',6))
