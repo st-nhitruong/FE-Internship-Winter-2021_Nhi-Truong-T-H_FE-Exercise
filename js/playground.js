@@ -50,7 +50,16 @@ function diff(a) {
 //  '12345678906', 
 //  '12345678909']
 // ```
-
+function findNumbers(str,a){
+    var arr =[];
+    for(var i = 0; i <10; i++) {
+        if(str.replace("*",i) % a === 0){
+            arr.push(str.replace("*",i));
+        }
+    }
+    return arr;
+}
+console.log(findNumbers('1234567890*',3))
 // 4. A masked number is a string that consists of digits and one asterisk (*) that should be replaced by exactly one digit. Given a masked number find all the possible options to replace the asterisk with a digit to produce an integer divisible by 6.
 
 // ```
@@ -63,3 +72,13 @@ function diff(a) {
 // Output: ['12345678900', 
 //  '12345678906']
 // ```
+function findNumbers(str,a){
+    var arr =[];
+    for(var i = 0; i <10; i++) {
+        if(str.replace("*",i) % a === 0){
+            arr.push(str.replace("*",i));
+        }
+    }
+    return arr;
+}
+console.log(findNumbers('1234567890*',6))
