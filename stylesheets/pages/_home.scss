@@ -1,15 +1,14 @@
-.header, .section-subcribe .container, .footer {
+.header-content, .section-subcribe .wrap, .footer-wrap {
     display: flex;
 }
 .section {
     width: 100%;
     padding-top: 48px;
     padding-bottom: 60px;
-    & {
-        &.section-banner {
-            position: relative;
-            padding-top: 0px;
-        }
+    &.section-banner {
+        position: relative;
+        padding-top: 0px;
+        padding-bottom: 60px;
         .banner {
             .banner-content {
                 width: 30%;
@@ -39,6 +38,8 @@
                 }
             }
         }
+    }
+    .benefit {
         .banner-benefit {
             display: flex;
             position: absolute;
@@ -60,32 +61,37 @@
         }
     }
 }
-.card-item {
-    position: relative;
-    .card-title {
-        position: absolute;
-        top: 168px;
-        left: 40px;
-        color:$white;
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 36px;
-    }
-    .btn-default{
-        &.card-link {
-            position: absolute;
-            top: 258px;
-            left: 40px;
+.section-collection {
+    .wrap {
+        .card-list {
+            .card-item {
+                position: relative;
+                &.onsale .badge {
+                    top: 128px;
+                    left: 40px;
+                }
+                .card-title {
+                    position: absolute;
+                    top: 168px;
+                    left: 40px;
+                    color:$white;
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: 36px;
+                }
+                .btn-default {
+                    &.card-link {
+                        position: absolute;
+                        top: 258px;
+                        left: 40px;
+                    }
+                }
+            }
         }
     }
 }
-.section-product .container{
+.section-product .wrap{
     position: relative;
-}
-.badge-sale {
-    position: absolute;
-    top: 128px;
-    left: 40px;
 }
 .section-title {
     font-style: normal;
@@ -109,15 +115,27 @@
         line-height: 30px;
         color: $black;
     }
+    .product-price-price {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        color: $black;
+    }
     .product-price-sale {
         font-weight: 400;
         font-size: 20px;
         line-height: 30px;
-        color: $red;
+        color: #FF0000;
     }
     .product-price.original {
         color: $grey-price-original;
         float: right;
+    }
+    &.onsale {
+        .badge {
+            top: 30px;
+            left: 26px;
+        }
     }
 }
 .section-benefit {
@@ -129,14 +147,19 @@
         line-height: 21px;
         color: $grey-c;
     }
+    .benefit-img{
+        width: 36px;
+        height: 36px;
+        margin-right: 15px;
+    }
 }
 .section-subcribe {
     position: relative;
     padding: 0;
     .subcribe-img {
-        position: relative;
+        vertical-align: bottom;
     }
-    .container {
+    .wrap {
         position: absolute;
         align-items: center;
         top: 50%;
@@ -160,6 +183,3 @@
     }
 
 }
-
-
-
