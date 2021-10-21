@@ -37,6 +37,6 @@ function displayAge() {
     var date = new Date();
     var currentYear = date.getFullYear();
     var age = currentYear - yearOfBirth;
-    document.getElementById("ketqua").innerHTML = 'Tuổi của bạn là:'+age;
+    document.getElementById("ketqua").innerHTML = 'Tuổi của bạn là: '+age;
     document.body.appendChild(p);
 }
