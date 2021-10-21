@@ -5,10 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>E-Shop</title>
+  <script src="https://kit.fontawesome.com/57602022a0.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <div class="container">
+    <div class="header-content container">
       <div class="logo">
         <h1>
           <a href="index.html">
@@ -48,20 +51,20 @@
     <!-- Section banner -->
     <section class="section section-banner">
       <div class="banner">
-        <img src="images/banner.png" alt="banner" class="banner-image">
+        <img src="images/banner.png" class="banner-img" alt="banner">
         <div class="banner-content">
-          <h2>Sale of the <span class="text-active">summer</span> collection</h2>
+          <h2 class="banner-title">Sale of the <span class="text-active">summer</span> collection</h2>
           <a href="#" class="banner-link text-uppercase">
             <img src="images/arrow.png" alt="shop now">
             shop now
           </a>
         </div>
       </div>
-      <div class="section-benefit">
-        <ul class="row benefit-list">
+      <div class="benefit">
+        <ul class="row benefit-list banner-benefit">
           <li class="col col-4">
             <div class="benefit benefit-horizontal">
-              <img src="images/shipping1.png" alt="shipping" class="benefit-img">
+              <img src="images/shipping1.png" class="benefit-img" alt="shipping">
               <div class="benefit-content">
                 <h5 class="benefit-title">Free Shipping</h5>
                 <p class="benefit-description">On purchases over $199</p>
@@ -70,7 +73,7 @@
           </li>
           <li class="col col-4">
             <div class="benefit benefit-horizontal">
-              <img src="images/smile.png" alt="smile" class="benefit-img">
+              <img src="images/smile.png" class="benefit-img" alt="smile">
               <div class="benefit-content">
                 <h5 class="benefit-title">99% Satisfied Customers</h5>
                 <p class="benefit-description">Our clients's opinions speak for themselves</p>
@@ -79,7 +82,7 @@
           </li>
           <li class="col col-4">
             <div class="benefit benefit-horizontal">
-              <img src="images/guaranteed.png" alt="money" class="benefit-img">
+              <img src="images/guaranteed.png" class="benefit-img" alt="money">
               <div class="benefit-content">
                 <h5 class="benefit-title">Originality Guaranteed</h5>
                 <p class="benefit-description">30 days warranty for each product from our store</p>
@@ -91,34 +94,34 @@
     </section>
     <!-- Section collection -->
     <section class="section section-collection">
-      <div class="container">
+      <div class="container wrap">
         <ul class="row card-list">
           <li class="col col-6 card-item">
-            <img src="images/adult-architecture-boutique.png" alt="new product" class="card-image">
+            <img src="images/adult-architecture-boutique.png" class="card-img" alt="new product">
             <h3 class="card-title">New arrivalsare now in!</h3>
             <a href="#" class="btn btn-default card-link text-uppercase">show collection</a>
           </li>
           <li class="col col-3 card-item">
-            <img src="images/image-collection-2.png" alt="t-shirts" class="card-image">
+            <img src="images/image-collection-2.png" class="card-img" alt="t-shirts">
             <h3 class="card-title">Basic t-shirts $29.99</h3>
-            <a href="#" class="btn btn-default card-link text-uppercase">more datails</a>
+            <a href="#" class="btn btn-default card-link text-uppercase">more details</a>
           </li>
-          <li class="col col-3 card-item">
-            <img src="images/image-collection-3.png" alt="product sale summer" class="card-image">
+          <li class="col col-3 card-item onsale">
+            <img src="images/image-collection-3.png" class="card-img" alt="product sale summer">
             <h3 class="card-title">Sale this summer</h3>
             <a href="#" class="btn btn-default card-link text-uppercase">view all</a>
-            <span class="discount">-50%</span>
+            <span class="badge badge-danger">-50%</span>
           </li>
         </ul>
       </div>
     </section>
     <!-- Section selected just for you -->
     <section class="section section-product">
-      <div class="container">
+      <div class="container wrap">
         <h3 class="section-title">Selected just for you</h3>
         <ul class="row">
           <li class="col col-3">
-            <div class="product">
+            <div class="product onsale">
               <a href="#">
                 <img src="images/image.png" class="product-img" alt="image-product">
               </a>
@@ -127,9 +130,9 @@
                   <a href="#">T-shirt Summer Viber</a>
                 </h4>
                 <span class="product-price-sale">$89.99</span>
-                <span class="product-price">$119.99</span>
+                <span class="product-price original">$119.99</span>
               </div>
-              <span class="discount">-30%</span>
+              <span class="badge badge-danger">-30%</span>
             </div>
           </li>
           <li class="col col-3">
@@ -172,7 +175,7 @@
             </div>
           </li>
         </ul>
-        <a href="#" class="btn btn-top-right text-uppercase">show more</a>
+        <a href="#" class="btn btn-top-right btn-default btn-outline text-uppercase">show more</a>
       </div>
     </section>
     <!-- section why should you choose us?-->
@@ -182,7 +185,7 @@
         <ul class="row">
           <li class="col col-3">
             <div class="benefit benefit-vertical">
-              <img src="images/shipping2.svg" alt="free shipping" class="benefit-img">
+              <img src="images/shipping2.svg" class="benefit-img" alt="free shipping">
               <div class="benefit-content">
                 <h5 class="benefit-title">Free Shipping</h5>
                 <p class="benefit-description">All purchases over $199 are eligible forfree shipping via USPS First Class Mail.</p>
@@ -191,7 +194,7 @@
           </li>
           <li class="col col-3">
             <div class="benefit benefit-vertical">
-              <img src="images/payment.png" alt="easy payments" class="benefit-img">
+              <img src="images/payment.svg" class="benefit-img" alt="easy payments">
               <div class="benefit-content">
                 <h5 class="benefit-title">Easy Payments</h5>
                 <p class="benefit-description">All payments are processed instantlyover a secure payment protocol.</p>
@@ -200,7 +203,7 @@
           </li>
           <li class="col col-3">
             <div class="benefit benefit-vertical">
-              <img src="images/guarantee.svg" alt="money-back guarantee" class="benefit-img">
+              <img src="images/guarantee.svg" class="benefit-img" alt="money-back guarantee">
               <div class="benefit-content">
                 <h5 class="benefit-title">Money-Back Guarantee</h5>
                 <p class="benefit-description">If an item arrived damaged or you'vechanged your mind, you can send itback for a full refund.</p>
@@ -209,7 +212,7 @@
           </li>
           <li class="col col-3">
             <div class="benefit benefit-vertical">
-              <img src="images/materials.png" alt="finest quality" class="benefit-img">
+              <img src="images/materials.png"  class="benefit-img" alt="finest quality">
               <div class="benefit-content">
                 <h5 class="benefit-title">Finest Quality</h5>
                 <p class="benefit-description">Designed to last, each of our products hasbeen crafted with the finest materials.</p>
@@ -225,7 +228,7 @@
         <h3 class="section-title text-center">Products in today</h3>
         <ul class="row">
           <li class="col col-3">
-            <div class="product">
+            <div class="product onsale">
               <a href="#" >
                 <img src="images/image.png" class="product-img" alt="image-product">
               </a>
@@ -234,9 +237,9 @@
                   <a href="#">T-shirt Summer Viber</a>
                 </h4>
                 <span class="product-price-sale">$89.99</span>
-                <span class="product-price">$119.99</span>
+                <span class="product-price original">$119.99</span>
               </div>
-              <span class="discount">-30%</span>
+              <span class="badge badge-danger badge-discount">-30%</span>
             </div>
           </li>
           <li class="col col-3">
@@ -283,24 +286,24 @@
     </section>
     <!-- Section newsletter -->
     <section class="section section-subcribe">
-      <img src="images/banner-subcriber.png" alt="banner for subcribe">
-      <div class="container">
+      <img src="images/banner-subcriber.png" class="subcribe-img" alt="banner for subcribe">
+      <div class="container wrap">
         <h3 class="subcribe-left">Subscribe to our newsletter andreceive exclusive offers every week</h3>
         <div class="subcribe-right">
           <form action="#">
             <input type="text" name="email" class="form-input" placeholder="Enter your email">
-            <button class="btn btn-primary form-btn text-">subscribe</button>
+            <button class="btn btn-primary text-uppercase">subscribe</button>
           </form>
         </div>
       </div>
     </section>
   </main>
   <footer>
-    <div class="container">
+    <div class="footer-wrap container">
       <div class="footer-left">
         <div class="logo">
           <a href="index.html">
-            <img src="images/logo.png" alt="E-Shop">
+            <img src="images/logo.png" class="logo-footer" alt="E-Shop">
           </a>
         </div>
         <p>House My Brand designs clothing for the young, the old &everyone in between – but most importantly, for the fashionable</p>
@@ -352,7 +355,7 @@
         </li>
       </ul>
     </div>
-    <p class="text-uppercase">design by iceo.co - &copy; 2019. all rights reserved.</p>
+    <p class="design-by text-center text-uppercase">design by iceo.co - &copy; 2019. all rights reserved.</p>
   </footer>
 </body>
 </html>
