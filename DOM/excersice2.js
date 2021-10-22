@@ -26,7 +26,7 @@ Object.assign(container.style, {
     display: 'flex',
     margin: '0 auto',
     width: '880px',
-    height: '246px'
+    height: '260px'
 })
 document.body.appendChild(container);
 
@@ -35,7 +35,8 @@ Object.assign(listOption.style, {
     display: 'flex',
     width: '100%',
     listStyle: 'none',
-    textAlign: 'center'
+    textAlign: 'center',
+    fontFamily: 'sans-serif',
 })
 
 data.forEach(item => {
@@ -48,26 +49,66 @@ data.forEach(item => {
     var title = document.createElement("h3");
     Object.assign(title.style, {
         borderBottom: '1px solid #E6E6E6',
+        backgroundColor: '#F7F7F7',
+        margin: '0',
+        padding: '8px',
+        fontSize: '20px'
     })
+    
     var textTilte = document.createTextNode(item.name);
     title.appendChild(textTilte);
+
     var price = document.createElement("p");
+    Object.assign(price.style, {
+        fontWeight: 'bold',
+        fontSize: '20px',
+        marginBottom: '10px'
+    })
     var textPrice = document.createTextNode(item.info['price']);
     price.appendChild(textPrice);
+
+    var user = document.createElement("p");
+    Object.assign(user.style, {
+        fontSize: '12px',
+        marginBottom: '2px'
+    })
+    var textUser = document.createTextNode(item.info['user']);
+    user.appendChild(textUser);
+
     var storage = document.createElement("p");
+    Object.assign(storage.style, {
+        fontSize: '12px',
+        margin: '0 0 2px 0'
+    })
     var textStorage = document.createTextNode(item.info['storage']);
     storage.appendChild(textStorage);
+
     var support = document.createElement("p");
+    Object.assign(support.style, {
+        fontSize: '12px',
+        margin: '0 0 2px 0'
+    })
     var textSupport = document.createTextNode(item.info['support']);
     support.appendChild(textSupport);
+
+    var help = document.createElement("p");
+    Object.assign(help.style, {
+        margin: '0 0 20px 0',
+        fontSize: '12px'
+    })
+    var textHelp = document.createTextNode(item.info['help']);
+    help.appendChild(textHelp);
+    
 
     var button = document.createElement("button");
     button.className = "btn";
     itemOption.appendChild(title);
     itemOption.appendChild(price);
+    itemOption.appendChild(user);
     itemOption.appendChild(storage);
     itemOption.appendChild(storage);
     itemOption.appendChild(support);
+    itemOption.appendChild(help);
     itemOption.appendChild(button)
     listOption.appendChild(itemOption);
 })
@@ -78,7 +119,7 @@ var btn = document.getElementsByClassName('btn');
 btn[0].innerHTML = "Get Started";
 Object.assign(btn[0].style, {
     color: '#4599FC',
-    border: '1px solid #4599FC',
+    border: '2px solid #4599FC',
     backgroundColor: '#FFFFFF',
     padding: '10px 150px',
     borderRadius: '5px'
