@@ -1,27 +1,47 @@
+@use "sass:map";
 .btn {
-    font-style: normal;
-    font-weight: bold;
-    font-size: $normal;
-    line-height: 19px;
-    padding: 14px 30px;
-    border-radius: 33px;
-    text-align: center;
-    color: $black;
+  font-style: normal;
+  font-weight: bold;
+  font-size: map.get($font-size,"normal");
+  line-height: 1.9;
+  padding: map.get($font-size,"sm") 3rem;
+  border-radius: 3.3rem;
+  text-align: center;
+  color: map.get($color,"black");
+  &-default{
+    padding: map.get($font-size,"sm") 1.8rem;
+    background-color: map.get($color,"white");
+  }
+  &-primary {
+    border: none;
+    padding: 0.8rem 3rem;
+    background-color: map.get($color,"primary-color");
+  }
+  &-top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &-outline {
+    border: 0.1rem solid map.get($color,"grey-b");
+  }
+}
+@media screen and (max-width: map.get($breakpoints,"small")) {
+  .btn {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    padding: 0.2rem 0.5rem;
+    
     &-default{
-        padding: 14px 18px;
-        background-color: $white;
+      padding: 0.3rem 0.9rem;
     }
     &-primary {
-        border: none;
-        padding: 14px 30px;
-        background-color: $primary-color;
+      padding: 0.7rem 1.7rem;
+      font-size: 1.3rem;
     }
     &-top-right {
-        position: absolute;
-        top: 0;
-        right: 0;
+      top: 1.4rem;
+      right: 2.4rem;
     }
-    &-outline {
-        border: 1px solid $grey-b;
-    }
+  }
 }

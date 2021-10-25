@@ -1,185 +1,256 @@
-.header-content, .section-subcribe .wrap, .footer-wrap {
-    display: flex;
-}
+@use "sass:map";
 .section {
-    width: 100%;
-    padding-top: 48px;
-    padding-bottom: 60px;
-    &.section-banner {
-        position: relative;
-        padding-top: 0px;
-        padding-bottom: 60px;
-        .banner {
-            .banner-content {
-                width: 30%;
-                position: absolute;
-                top: 222px;
-                left: 240px;
-                color: $white;
-                .banner-title {
-                    font-size: 72px;
-                    width: 100%;
-                    line-height: 101.5%;
-                    font-style: normal;
-                    font-weight: bold;
-                    margin-bottom: 24px;
-                }
-                .banner-link {
-                    display: flex;
-                    color: $white;
-                    font-weight: 700;
-                    font-size: 24px;
-                    line-height: 36px;
-                    img {
-                        width: 36px;
-                        height: 36px;
-                        margin-right: 10px;
-                    }
-                }
-            }
+  padding-top: 4.8rem;
+  padding-bottom: 6rem;
+  &.section-banner {
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 6.8rem;
+    .banner {
+      .banner-content {
+        width: 30%;
+        position: absolute;
+        top: 22.2rem;
+        left: 24rem;
+        color: map.get($color,"white");
+        .banner-title {
+          font-size: map.get($font-size,"xxxl");
+          width: 100%;
+          line-height: 1.5;
+          font-style: normal;
+          font-weight: bold;
+          margin-bottom: map.get($font-size,"xl");
+          .text-active {
+            color: #FBB03B;
+          }
         }
-    }
-    .benefit {
-        .banner-benefit {
-            display: flex;
-            position: absolute;
-            width: 80%;
-            border-top-right-radius: 100px;
-            background-color: $white;
-            padding: 34px;
-            bottom: 7%;
-            padding-left: 15%;  
-            .benefit-horizontal {
-                display: flex;
-                flex-direction: row;
-                .benefit-img {
-                    width: 36px;
-                    height: 36px;
-                    margin-right: 15px;
-                }
-            }
+        .banner-link {
+          display: flex;
+          color: map.get($color,"white");
+          font-weight: 700;
+          font-size: map.get($font-size,"xl");
+          line-height: 3.6rem;
+          img {
+            width: 3.6rem;
+            height: 3.6rem;
+            margin-right: 1rem;
+          }
         }
+      }
     }
+  }
 }
 .section-collection {
-    .wrap {
-        .card-list {
-            .card-item {
-                position: relative;
-                &.onsale .badge {
-                    top: 128px;
-                    left: 40px;
-                }
-                .card-title {
-                    position: absolute;
-                    top: 168px;
-                    left: 40px;
-                    color:$white;
-                    font-size: 24px;
-                    font-weight: 400;
-                    line-height: 36px;
-                }
-                .btn-default {
-                    &.card-link {
-                        position: absolute;
-                        top: 258px;
-                        left: 40px;
-                    }
-                }
-            }
+  .card-list {
+    .card-item {
+      position: relative;
+      &.onsale {
+        .badge {
+          top: 12.8rem;
+          left: 4rem;
         }
+      }
+      .card-title {
+        position: absolute;
+        top: 15.8rem;
+        left: 4rem;
+        color: map.get($color,"white");
+        font-size: map.get($font-size,"xl");
+        font-weight: 400;
+        line-height: 3.6rem;
+      }
+      .btn-default {
+        &.card-link {
+          position: absolute;
+          top: 23.8rem;
+          left: 4rem;
+        }
+      }
     }
+  }
 }
-.section-product .wrap{
+.section-product {
+  .wrap{
     position: relative;
+  }
 }
 .section-title {
-    font-style: normal;
-    font-weight: 300;
-    font-size: 32px;
-    line-height: 48px;
-    color: $black;
-    margin-bottom: 40px;
-}
-.product {
-    position: relative;
-    .product-title {
-        font-size: 16px;
-        line-height: 24px;
-        font-weight: 300;
-        color: $black;
-    }
-    .product-price {
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 30px;
-        color: $black;
-    }
-    .product-price-price {
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 30px;
-        color: $black;
-    }
-    .product-price-sale {
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 30px;
-        color: #FF0000;
-    }
-    .product-price.original {
-        color: $grey-price-original;
-        float: right;
-    }
-    &.onsale {
-        .badge {
-            top: 30px;
-            left: 26px;
-        }
-    }
+  font-style: normal;
+  font-weight: 300;
+  font-size: map.get($font-size,"xxl");
+  line-height: 4.8rem;
+  color: map.get($color,"black");
+  margin-bottom: 4rem;
 }
 .section-benefit {
-    background-color: $grey-bg-benefit;
-    .benefit-description {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 21px;
-        color: $grey-c;
-    }
-    .benefit-img{
-        width: 36px;
-        height: 36px;
-        margin-right: 15px;
-    }
+  background-color: map.get($color,"grey-bg-benefit");
+  .benefit-title {
+    font-size: 1.6rem;
+  }
+  .benefit-description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: map.get($font-size,"sm");
+    line-height: 2.1;
+    color: map.get($color,"grey-c");
+  }
+  .benefit-img{
+    width: 3.6rem;
+    height: 3.6rem;
+    margin-right: 1.5rem;
+  }
 }
 .section-subcribe {
-    position: relative;
-    padding: 0;
+  position: relative;
+  padding: 0;
+  .subcribe-img {
+    vertical-align: bottom;
+  }
+  .wrap {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    top: 50%;
+    left: 12%;
+    transform: translateY(-50%);
+    z-index: 99;
+    .subcribe-left {
+      width: 50%;
+      font-size: map.get($font-size,"xl");
+      line-height: 3.6rem;
+      color: map.get($color,"white");
+      font-weight: 400;
+    }
+    .form-input {
+      border: none;
+      padding: map.get($font-size,"sm") 6.4rem;
+      border-radius: 6.1rem;
+      background-color: map.get($color,"white");
+      margin-right: 4rem;
+    }
+  }
+}
+
+@media screen and (max-width: map.get($breakpoints,"small")) {
+.section {
+  padding-top: 2.4rem;
+  padding-bottom: 2.8rem;
+  &.section-banner {
+    padding-bottom: 0;
+    .banner {
+      .banner-img {
+        content: url("../../images/home-banner.png");
+      }
+      .banner-content {
+        width: 70%;
+        top: 27.1rem;
+        left: 2.4rem;
+        .banner-title {
+          font-size: 4.8rem;
+          line-height: 1.4;
+          margin-bottom: 2.2rem;
+        }
+        .banner-link {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+.section-collection {
+  .card-list {
+    .card-item {
+      &.onsale {
+        .badge {
+          top: 12.3rem;
+          left: 1.6rem;
+        }
+      }
+      &.col-6 {
+        width: 100%;
+      }
+      &.col-3 {
+        width: 50%;
+      }
+      .card-title {
+        top: 14rem;
+        left: 1.6rem;
+        font-size: map.get($font-size,"sm");
+        line-height: 2.1;
+      }
+      .btn-default {
+        &.card-link {
+          top: 17.8rem;
+          left: 1.6rem;
+        }
+      }
+    }
+  }
+}
+.section-product {
+  .wrap{
+    .row {
+      .col-3 {
+        width: 50%;
+        margin-bottom: 1.2rem;
+      }
+    }
+  }
+}
+.section-title {
+  font-size: 1.8rem;
+  line-height: 2.7;
+  margin-bottom: 1.6rem;
+}
+.section-benefit {
+  .benefit-title {
+    font-size: 1.2rem;
+  }
+  .row {
+    flex-direction: column;
+    .col-3 {
+      width: 100%;
+      margin-bottom: 1.6rem;
+      .benefit-vertical {
+        display: flex;
+      }
+      .benefit-description {
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+      .benefit-img{
+        width: 6.8rem;
+        height: 6.8rem;
+        margin-right: 1.6rem;
+      }
+    }
+  }
+}
+
+  .section-subcribe {
+    padding-bottom: 0;
     .subcribe-img {
-        vertical-align: bottom;
+      content: url("../../images/banner-subcriber-mb.png");
+      width: 100%;
     }
     .wrap {
-        position: absolute;
-        align-items: center;
-        top: 50%;
-        left: 12%;
-        transform: translateY(-50%);
-        z-index: 99;
-        .subcribe-left {
-            width: 50%;
-            font-size: 24px;
-            line-height: 36px;
-            color: $white;
-            font-weight: 400;
-        }
-        .form-input {
-            border: none;
-            padding: 14px 64px;
-            border-radius: 61px;
-            background-color: $white;
-            margin-right: 40px;
-        }
+      flex-direction: column;
+      top: 50%;
+      left: 2%;
+      transform: translateY(-50%);
+      text-align: left;
+      z-index: 99;
+      .subcribe-left {
+        width: 100%;
+        padding-right: 15rem;
+        margin-top: 2.4rem;
+        font-size: 1.4rem;
+        line-height: 2;
+      }
+      .form-input {
+        padding: 1.2rem 7.4rem;
+        margin-bottom: 1.6rem;
+      }
     }
-
+  }
 }

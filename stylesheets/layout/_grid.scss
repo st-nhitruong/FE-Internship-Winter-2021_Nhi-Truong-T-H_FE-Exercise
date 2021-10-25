@@ -1,0 +1,30 @@
+@use "sass:map";
+.container {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+}
+.col {
+  padding: 0 1rem;
+}
+@for $i from 1 to 12 {
+	.col-#{$i}{
+		width: calc(100%/12*$i);
+	}
+}
+@media screen and (max-width: map.get($breakpoints,"small")) {
+  .container {
+    max-width: 375px;
+    // margin: 0 auto;
+    // padding: 0 1rem;
+  }
+  .col {
+    padding: 0 0.5rem;
+  }
+}

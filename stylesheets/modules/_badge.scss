@@ -1,11 +1,20 @@
+
+@use "sass:map";
 .badge {
-    position: absolute;
-    width: 60px;
-    padding: 6px 10px;
-    border-radius: 20px;
-    text-align: center;
-    &-danger {
-        color: $white;
-        background-color: $red;
-    }
+  position: absolute;
+  width: 6rem;
+  padding: 0.6rem 1rem;
+  border-radius: 2rem;
+  text-align: center;
+  &-danger {
+    color:  map.get($color,"white");
+    background-color:  map.get($color,"red");
+  }
+}
+@media screen and (max-width: map.get($breakpoints,"small")) {
+  .badge {
+    width: 3.4rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.9rem;
+  }
 }

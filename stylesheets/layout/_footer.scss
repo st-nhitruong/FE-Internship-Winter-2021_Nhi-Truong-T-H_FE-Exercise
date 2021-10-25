@@ -1,42 +1,69 @@
+@use "sass:map";
 footer {
-    background-color: $primary-color;
-    line-height: 21px;
-    color: $white;
+  background-color: map.get($color,"primary-color");
+  line-height: 2.1;
+  color: map.get($color,"white");
+  .footer-wrap {
+    display: flex;
+    a {
+      color: map.get($color,"white");
+    }
+    .footer-left, .footer-right {
+      padding: 4rem 0 5rem;
+      font-size: map.get($font-size,"sm");
+    }
+    .footer-left {
+      width: 45%;
+      padding-left: 1rem;
+      .logo-footer {
+        width: auto;
+      }
+      .social-list {
+        display: flex;
+        .social-item {
+          padding: 5.6rem 1rem 0 1rem;
+        }
+      }
+    }
+    .footer-right {
+      width: 55%;
+      display: flex;
+      .footer-item {
+        padding-right: 6.8rem;
+        .footer-title {
+          font-size: map.get($font-size,"normal");;
+          padding-bottom: 1.8rem;
+        }
+      }
+    }
+  }
+  .design-by {
+    padding: map.get($font-size,"xl") 0;
+    border-top: 0.1rem solid map.get($color,"white");
+  }
+}
+@media screen and (max-width: map.get($breakpoints,"small")) {
+  footer {
     .footer-wrap {
-        a {
-            color: $white;
+      flex-direction: column;
+      .footer-left, .footer-right {
+        width: 100%;
+        padding: 2.9rem 0 1.9rem;
+      }
+      .footer-left {
+        .social-list {
+          display: none;
         }
-        .footer-left, .footer-right {
-            padding: 40px 0 50px 0;
-            font-size: 14px;
-        }
-        .footer-left {
-            width: 45%;
-            padding-left: 10px;
-            .logo-footer {
-                    width: auto;
-                }
-            .social-list {
-                display: flex;
-                .social-item {
-                    padding: 56px 10px 0 10px;
-                }
-            }
-        }
-        .footer-right {
-            width: 55%;
-            display: flex;
-            .footer-item {
-                padding-right: 68px;
-                .footer-title {
-                    font-size: 16px;
-                    padding-bottom: 18px;
-                }
-            }
-        }
+      }
     }
-    .design-by {
-        padding: 24px 0;
-        border-top: 1px solid $white;
+    .footer-right {
+      flex-direction: column;
+      .footer-item {
+        padding-bottom: 2.4rem;
+        .footer-title {
+          padding-bottom: 0.8rem;
+        }
+      }
     }
+  }
 }

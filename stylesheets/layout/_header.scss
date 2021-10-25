@@ -1,27 +1,73 @@
-.header-content {
+@use "sass:map";
+header {
+  .header-content {
+    display: flex;
     width: 100%;
     position: absolute;
     justify-content: space-between;
-    height: 48px;
-    top: 48px;
+    height: 4.8rem;
+    top: 4.8rem;
     left: 10%;
     z-index: 1;
-}
-.nav-list {
+  }
+  .nav-list {
     .nav-item {
-        display: inline-block;
-        padding: 0 30px;
-        .nav-link {
-            font-weight: 700;
-            font-size: 18px;
-            line-height: 27px;
-            color: $primary-color;
-        }
+      display: inline-block;
+      padding: 0 3rem;
+      .nav-link {
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 2.7rem;
+        color: map.get($color, "primary-color");
+      }
     }
-}
-.options-list {
+  }
+  .options-list {
     .options-item {
-        display: inline-block;
-        padding: 0 10px;
+      display: inline-block;
+      padding: 0 1rem;
+      &.menu {
+        display: none;
+      }
     }
+  }
+}
+@media screen and (max-width: map.get($breakpoints,"small")) {
+  header {
+    .header-content {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      background-color: #FFFFFF;
+      padding: 2rem;
+      height: 7.2rem;
+      .logo {
+        content: url("../../images/logomb.png");
+        width: 12.8rem;
+        height: 3.2rem;
+      }
+      .nav {
+        display: none;
+      }
+      .options-list {
+        display: flex;
+        .options-item:nth-child(1) {
+          display: none;
+        }
+        .options-item {
+          &.menu {
+            display: flex;
+          }
+          .options-link {
+            img {
+              width: 20px;
+              filter: brightness(0) saturate(100%);
+            }
+          }
+        }
+      }
+    }
+  }
 }
