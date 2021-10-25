@@ -12,6 +12,18 @@ oddNumbers.forEach(x =>{
 })
 // console.log(sumOdd)
 
+//Bài 1 viết lại dưới dạng function với tham số là 1 mảng.
+function sum(array) {
+    var sum = 0;
+    array.forEach(element=> {
+        if(element%2!=0){
+            sum += element;
+        }
+    });
+    return sum;
+}
+// console.log(sum(mang));
+
 // 2. Viết 1 function cắt chuỗi, lấy ra 10 ký tự đầu tiên và thêm vào dấu "..." ở cuối chuỗi, trong trường hợp chuỗi dài hơn 15 ký tự.
 function ex2(str) {
     if(str.length > 15){
@@ -33,7 +45,7 @@ function ex3(str) {
 // Tham số truyền vào là 1 mảng các số.
 // Kết quả là số nhỏ nhất trong mảng.
 var arr = [65, 1, 12, 21];
-var min = function(arr) {
+function findNumberMin(arr) {
     var a = arr[0];
     arr.forEach(function(x) {
         if(x < a)
@@ -41,7 +53,9 @@ var min = function(arr) {
     })
     return a;
 }
-// console.log(min(arr))
+// console.log(findNumberMin(arr))
+
+
 
 // 5. Sử dụng object constructors, tạo 1 mảng gồm các học sinh có đầy đủ name, age, school theo data bên dưới
 // John - 26 - Cambridge
@@ -71,28 +85,28 @@ Student.prototype.coding = function() {
 // 6. cho 2 mảng dữ liệu số, viết 1 hàm tìm các phần tử cùng xuất hiện ở cả 2 mảng.
 var arr1 = [65, 1, 12, 21, 1];
 var arr2 = [5, 1, 12, 41, 45];
-var find = function(a, b){
+function findNumbersDuplicate(arr1, arr2){
     var arr3 = [];
-    a.filter(function(aa){
-        b.forEach(function(bb){
-            if((bb === aa) && !arr3.includes(bb)){
-                arr3.push(bb)
+    arr1.filter(function(item1){
+        arr2.forEach(function(item2){
+            if((item1 === item2) && !arr3.includes(item2)){
+                arr3.push(item2)
             }
         })
     })
     return arr3;
 }
-console.log(find(arr1,arr2));
+console.log(findNumbersDuplicate(arr1,arr2));
 // 7. tính tổng các chữ số của 1 số.
 // input: 1234
 // output: 10
 
-function exercise_7(x){
+function exercise_7(number){
     var sum = 0;
-    while(x) {
-        sum += x % 10;
-        x = Math.floor(x/10);
+    while(number) {
+        sum += number % 10;
+        number = Math.floor(number/10);
     }
     return sum
 }
-// console.log(exercise_7(12233));
+console.log(exercise_7(12233));

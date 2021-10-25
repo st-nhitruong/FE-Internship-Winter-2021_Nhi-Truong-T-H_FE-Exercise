@@ -15,6 +15,22 @@ function sumNumber(val1, val2) {
         return val1 + val2;
 }
 // console.log(sumNumber(3,5))
+
+//Bài 1 viết lại dưới dạng function với tham số là 1 mảng.
+
+function sumOddNumbers(array){
+    // do something
+    var sum = 0;
+    array.forEach(element => {
+        sum += element;
+    });
+    return sum;
+}
+
+var mang = [2,3,50,100];
+
+console.log(sumOddNumbers(mang));
+
 // 2. Write a JavaScript program to compute the absolute difference between a specified number and 19. Returns triple their absolute difference if the specified number is greater than 19.
 
 // ```
@@ -59,7 +75,7 @@ function findNumbers(str,a){
     }
     return arr;
 }
-console.log(findNumbers('1234567890*',3))
+// console.log(findNumbers('1234567890*',3))
 // 4. A masked number is a string that consists of digits and one asterisk (*) that should be replaced by exactly one digit. Given a masked number find all the possible options to replace the asterisk with a digit to produce an integer divisible by 6.
 
 // ```
