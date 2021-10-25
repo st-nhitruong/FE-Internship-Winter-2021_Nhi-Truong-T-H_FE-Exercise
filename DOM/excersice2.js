@@ -100,7 +100,6 @@ data.forEach(item => {
   var textHelp = document.createTextNode(item.info['help']);
   help.appendChild(textHelp);
   
-
   var button = document.createElement("button");
   button.className = "btn";
   itemOption.appendChild(title);
