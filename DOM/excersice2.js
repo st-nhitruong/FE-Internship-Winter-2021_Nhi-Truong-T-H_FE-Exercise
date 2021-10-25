@@ -19,7 +19,7 @@ var data = [
       help: 'Help center access'
     }
   }
-]
+];
 
 var container = document.createElement("div");
 
@@ -28,7 +28,7 @@ Object.assign(container.style, {
   margin: '0 auto',
   width: '880px',
   height: '260px'
-})
+});
 document.body.appendChild(container);
 
 var listOption = document.createElement("ul");
@@ -38,7 +38,7 @@ Object.assign(listOption.style, {
   listStyle: 'none',
   textAlign: 'center',
   fontFamily: 'sans-serif',
-})
+});
 
 data.forEach(item => {
   var itemOption = document.createElement("li");
@@ -46,7 +46,7 @@ data.forEach(item => {
     width: 'calc(50%)',
     marginRight: '20px',
     border: '1px solid #CCCCCC'
-  })
+  });
   var title = document.createElement("h3");
   Object.assign(title.style, {
     borderBottom: '1px solid #E6E6E6',
@@ -54,7 +54,7 @@ data.forEach(item => {
     margin: '0',
     padding: '8px',
     fontSize: '20px'
-  })
+  });
   
   var textTilte = document.createTextNode(item.name);
   title.appendChild(textTilte);
@@ -64,7 +64,7 @@ data.forEach(item => {
     fontWeight: 'bold',
     fontSize: '20px',
     marginBottom: '10px'
-  })
+  });
   var textPrice = document.createTextNode(item.info['price']);
   price.appendChild(textPrice);
 
@@ -72,7 +72,7 @@ data.forEach(item => {
   Object.assign(user.style, {
     fontSize: '12px',
     marginBottom: '2px'
-  })
+  });
   var textUser = document.createTextNode(item.info['user']);
   user.appendChild(textUser);
 
@@ -80,7 +80,7 @@ data.forEach(item => {
   Object.assign(storage.style, {
     fontSize: '12px',
     margin: '0 0 2px 0'
-  })
+  });
   var textStorage = document.createTextNode(item.info['storage']);
   storage.appendChild(textStorage);
 
@@ -88,7 +88,7 @@ data.forEach(item => {
   Object.assign(support.style, {
     fontSize: '12px',
     margin: '0 0 2px 0'
-  })
+  });
   var textSupport = document.createTextNode(item.info['support']);
   support.appendChild(textSupport);
 
@@ -96,7 +96,7 @@ data.forEach(item => {
   Object.assign(help.style, {
     margin: '0 0 20px 0',
     fontSize: '12px'
-  })
+  });
   var textHelp = document.createTextNode(item.info['help']);
   help.appendChild(textHelp);
   
@@ -109,7 +109,7 @@ data.forEach(item => {
   itemOption.appendChild(storage);
   itemOption.appendChild(support);
   itemOption.appendChild(help);
-  itemOption.appendChild(button)
+  itemOption.appendChild(button);
   listOption.appendChild(itemOption);
 })
 
@@ -123,7 +123,7 @@ Object.assign(btn[0].style, {
   backgroundColor: '#FFFFFF',
   padding: '10px 150px',
   borderRadius: '5px'
-})
+});
 btn[1].innerHTML = "Buy Now";
 Object.assign(btn[1].style, {
   color: '#FFFFFF',
@@ -131,4 +131,4 @@ Object.assign(btn[1].style, {
   backgroundColor: '#157FFB',
   padding: '10px 150px',
   borderRadius: '5px'
-})
+});
