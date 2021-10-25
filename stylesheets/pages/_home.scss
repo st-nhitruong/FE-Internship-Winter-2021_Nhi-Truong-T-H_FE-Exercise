@@ -138,7 +138,7 @@
   &.section-banner {
     padding-bottom: 0;
     .banner {
-      .banner-img {
+      .banner-img{
         content: url("../../images/home-banner.png");
       }
       .banner-content {
@@ -154,6 +154,15 @@
           font-size: 1.4rem;
         }
       }
+    }
+    .banner::after {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%);
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0; 
     }
   }
 }
@@ -228,6 +237,7 @@
 }
 
   .section-subcribe {
+    padding-top: 0;
     padding-bottom: 0;
     .subcribe-img {
       content: url("../../images/banner-subcriber-mb.png");
@@ -242,8 +252,8 @@
       z-index: 99;
       .subcribe-left {
         width: 100%;
-        padding-right: 15rem;
-        margin-top: 2.4rem;
+        padding-right: 10rem;
+        margin-top: 0.4rem;
         font-size: 1.4rem;
         line-height: 2;
       }
@@ -252,5 +262,14 @@
         margin-bottom: 1.6rem;
       }
     }
+  }
+  .section-subcribe::after {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0; 
   }
 }
