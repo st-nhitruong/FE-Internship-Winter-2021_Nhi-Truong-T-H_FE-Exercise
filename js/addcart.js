@@ -12,7 +12,6 @@ class Product {
     }
   }
 
-function creatProduct(product) {
-  let fullProduct = new Product(product.id, product.name, product.img, product.price, product.discount);
-  return fullProduct;
+function addProduct() {
+
 }

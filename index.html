@@ -13,7 +13,7 @@
 <body>
   <header>
     <div class="header-content container">
-      <div class="logo">
+      <div class="logo" onclick="linkHome()">
         <h1>
           <a href="index.html">
             <img src="images/logo.png" alt="E-Shop">
@@ -35,7 +35,7 @@
             </a>
           </li>
           <li class="options-item">
-            <a href="#" class="options-link">
+            <a href="#" class="options-link" onclick="linkToCart()">
               <img src="images/icon-cart.svg" alt="cart">
             </a>
           </li>
@@ -134,6 +134,7 @@
                 <span class="product-price original">$119.99</span>
               </div>
               <span class="badge badge-danger">-30%</span>
+              <div class="button-add-cart text-uppercase"><a href="#"> add cart </a></div>
             </div>
           </li>
           <li class="col col-3">
@@ -147,6 +148,7 @@
                 </h4>
                 <span class="product-price">$119.99</span>
               </div>
+              <div class="button-add-cart text-uppercase"><a href="#"> add cart </a></div>
             </div>
           </li>
           <li class="col col-3">
@@ -160,6 +162,7 @@
                 </h4>
                 <span class="product-price">$79.99</span>
               </div>
+              <div class="button-add-cart text-uppercase"><a href="#"> add cart </a></div>
             </div>
           </li>
           <li class="col col-3">
@@ -173,6 +176,7 @@
                 </h4>
                 <span class="product-price">$11.99</span>
               </div>
+              <div class="button-add-cart text-uppercase"><a href="#"> add cart </a></div>
             </div>
           </li>
         </ul>
@@ -241,6 +245,7 @@
                 <span class="product-price original">$119.99</span>
               </div>
               <span class="badge badge-danger badge-discount">-30%</span>
+              <div class="button-add-cart text-uppercase"><a href="#"> add cart </a></div>
             </div>
           </li>
           <li class="col col-3">
@@ -254,6 +259,7 @@
                 </h4>
                 <span class="product-price">$119.99</span>
               </div>
+              <div class="button-add-cart text-uppercase"><a href="#"> add cart </a></div>
             </div>
           </li>
           <li class="col col-3">
@@ -267,6 +273,7 @@
                 </h4>
                 <span class="product-price">$79.99</span>
               </div>
+              <div class="button-add-cart text-uppercase"><a href="#"> add cart </a></div>
             </div>
           </li>
           <li class="col col-3">
@@ -280,6 +287,7 @@
                 </h4>
                 <span class="product-price">$11.99</span>
               </div>
+              <div class="button-add-cart text-uppercase"><a href="#"> add cart </a></div>
             </div>
           </li>
         </ul>
@@ -363,7 +371,7 @@
       <div class="cart-header">
         <h3 class="cart-title">Shopping Cart</h3>
         <div class="cart-group-icon">
-          <img src="./images/icon-cart.svg" alt="cart" class="cart-icon cart-border-icon">
+          <img src="./images/noun_cart.png" alt="cart" class="cart-icon cart-border-icon">
           <span class="line"></span>
           <img src="./images/delivery.svg" alt="delivery" class="cart-icon delivery-icon">   
         </div>
@@ -380,14 +388,14 @@
         <tbody></tbody>
       </table>
       <div class="cart-footer">
-        <div class="cart-footer-continue">
+        <div class="cart-footer-continue" onclick="linkHome()">
           <a href="#" class="btn back-btn" onclick="linkToCart()"><img src="./images/arrowleft.svg" alt="Continue Shopping"></a>
           <h4 class="cart-footer-continue-title">Continue Shopping</h4>
         </div>
         <div class="cart-footer-payment">
           <div class="promo-code">
             <input type="text" name="" placeholder="Promo Code" class="form-input">
-            <button type="button" class="btn promo-code-btn">
+            <button type="button" class="btn btn-promo-code">
               <img src="./images/send.svg" alt="icon send">
             </button>
           </div>
@@ -395,10 +403,11 @@
             <h4 class="total-cost-text">Total cost</h4>
             <h4 class="total-cost-price"></h4>
           </div>
-          <button type="button" class="btn form-btn">chekout</button>
+          <button type="button" class="btn form-btn text-uppercase">chekout</button>
         </div>
       </div>
     </div>
   </section>
+  <script src="./js/changeview.js"></script>
 </body>
 </html>
