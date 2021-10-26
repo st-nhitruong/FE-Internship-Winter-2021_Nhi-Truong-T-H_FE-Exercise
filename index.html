@@ -8,6 +8,7 @@
   <script src="https://kit.fontawesome.com/57602022a0.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cart.css">
 </head>
 <body>
   <header>
@@ -357,5 +358,47 @@
     </div>
     <p class="design-by text-center text-uppercase">design by iceo.co - &copy; 2019. all rights reserved.</p>
   </footer>
+  <section class="cart">
+    <div class="container">
+      <div class="cart-header">
+        <h3 class="cart-title">Shopping Cart</h3>
+        <div class="cart-group-icon">
+          <img src="./images/icon-cart.svg" alt="cart" class="cart-icon cart-border-icon">
+          <span class="line"></span>
+          <img src="./images/delivery.svg" alt="delivery" class="cart-icon delivery-icon">   
+        </div>
+      </div>
+      <table class="cart-body">
+        <thead>
+          <th colspan="2">Product</th>
+          <th>Color</th>
+          <th>Size</th>
+          <th>Ammount</th>
+          <th>Price</th>
+          <th></th>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class="cart-footer">
+        <div class="cart-footer-continue">
+          <a href="#" class="btn back-btn" onclick="linkToCart()"><img src="./images/arrowleft.svg" alt="Continue Shopping"></a>
+          <h4 class="cart-footer-continue-title">Continue Shopping</h4>
+        </div>
+        <div class="cart-footer-payment">
+          <div class="promo-code">
+            <input type="text" name="" placeholder="Promo Code" class="form-input">
+            <button type="button" class="btn promo-code-btn">
+              <img src="./images/send.svg" alt="icon send">
+            </button>
+          </div>
+          <div class="total-cost">
+            <h4 class="total-cost-text">Total cost</h4>
+            <h4 class="total-cost-price"></h4>
+          </div>
+          <button type="button" class="btn form-btn">chekout</button>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
