@@ -4,24 +4,6 @@ if(data) {
   const renderProductsList = () => { 
     const $cart_product = document.querySelector("tbody");
     Object.keys(convert).map((key, index) =>{ 
-      // html = "<tr>" +
-      //           "<td>" +
-      //             "<img src=' "+ convert[key]['img'] +" ' alt='image-product' class='cart-img'>"+
-      //           "</td>"+
-      //           "<td>"+
-      //             "<div class='cart-product-info'>"+
-      //               "<h3 class='cart-product-name'>T-shirt</h3>"+
-      //               "<p class='cart-product-id'>#12434</p>"+
-      //             "</div>"+
-      //           "</td>"+
-      //           "<td>White </td>"+
-      //           "<td>XL</td>"+
-      //           "<td>1</td>"+
-      //           "<td>$89,88</td>"+
-      //           "<td>x</td>"+
-      //         "</tr>"
-      //       $cart_product.appendChild(html);
-    
       const $tr = document.createElement('tr');
       $cart_product.appendChild($tr);
   
@@ -68,7 +50,7 @@ if(data) {
       const $buttonIcre = document.createElement("button");
       $buttonIcre.innerHTML= "+";
       $buttonIcre.classList.add("btn-increase");
-      $buttonIcre.setAttribute("onclick", "add_qty("+convert[key]['id']+")");
+      $buttonIcre.setAttribute("onclick", "increment_qty("+convert[key]['id']+")");
       $div2.appendChild($buttonIcre);
       const $input = document.createElement("input");
       $input.classList.add("input-amount");
@@ -77,6 +59,7 @@ if(data) {
       const $buttonDecre = document.createElement("button");
       $buttonDecre.innerHTML= "-";
       $buttonDecre.classList.add("btn-decrease");
+      $buttonDecre.setAttribute("onclick", "decrement_qty("+convert[key]['id']+")");
       $div2.appendChild($buttonDecre);
       
 
@@ -97,9 +80,27 @@ if(data) {
 
   renderProductsList();
 }
-function add_qty(id) {
-  
+function increment_qty(id) {
+  for (let i=0; i< convert.length; i++) {
+    if (convert[i].id == id) {
+      convert[i].quantity = convert[i].quantity + 1;
+    }
+  }
+  localStorage.setItem("bonhotam", JSON.stringify(convert));
 }
+
+function decrement_qty(id) {
+  for (let i=0; i<convert.length; i++) {
+    if (convert[i].id == id) {
+      convert[i].quantity = convert[i].quantity - 1;
+      if(convert[i].quantity == 0) {
+        remove_cart(convert[i].id);
+      }
+    }
+  }
+  localStorage.setItem("bonhotam", JSON.stringify(convert));
+}
+
 function remove_cart(id) {
   convert = convert.filter(product => product.id != id);
   localStorage.setItem("bonhotam", JSON.stringify(convert));
