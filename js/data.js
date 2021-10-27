@@ -107,9 +107,7 @@ const renderListProductsSelected = () => {
 const addProductToCart = (productData) => {
   const rawProducts = localStorage.getItem("bonhotam");
   const productsList = rawProducts ? JSON.parse(rawProducts) : [];
-  const existingProduct = productsList.find(
-    (product) => product.id === productData.id
-  );
+  const existingProduct = productsList.find((product) => product.id === productData.id);
   if (existingProduct) {
     existingProduct.quantity = existingProduct.quantity + 1;
   } else {

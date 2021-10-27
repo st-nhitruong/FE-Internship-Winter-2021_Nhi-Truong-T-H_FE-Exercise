@@ -96,3 +96,32 @@
 .product:hover .button-add-cart{
   opacity: 1;
 }
+th {
+  font-weight: 400;
+}
+
+.cart-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.btn-remove {
+    font-weight: bold;
+    border: none;
+    background: #FFFFFFFF;
+}
+
+.amount {
+  border: 1px solid #D8D8D8;
+  border-radius: 50px;
+  display: inline-block;
+  padding: 6px 10px;
+}
+.btn-increase, .btn-decrease {
+  border: none;
+  background-color: #FFFFFF;
+}
+.input-amount {
+  border: none;
+  text-align: center;
+}
