@@ -1,0 +1,650 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", "sans-serif";
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+}
+
+.col {
+  padding: 0 1rem;
+}
+
+.col-1 {
+  width: 8.3333333333%;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+}
+
+.col-5 {
+  width: 41.6666666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.3333333333%;
+}
+
+.col-8 {
+  width: 66.6666666667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.3333333333%;
+}
+
+.col-11 {
+  width: 91.6666666667%;
+}
+
+@media screen and (max-width: 376px) {
+  .container {
+    max-width: 375px;
+  }
+
+  .col {
+    padding: 0 0.5rem;
+  }
+}
+header .header-content {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  justify-content: space-between;
+  height: 4.8rem;
+  top: 4.8rem;
+  left: 10%;
+  z-index: 1;
+}
+header .nav-list .nav-item {
+  display: inline-block;
+  padding: 0 3rem;
+}
+header .nav-list .nav-item .nav-link {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  color: #FBB03B;
+}
+header .options-list .options-item {
+  display: inline-block;
+  padding: 0 1rem;
+}
+header .options-list .options-item.menu {
+  display: none;
+}
+
+@media screen and (max-width: 376px) {
+  header .header-content {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #FFFFFF;
+    padding: 2rem;
+    height: 7.2rem;
+  }
+  header .header-content .logo {
+    content: url("../../images/logomb.png");
+    width: 12.8rem;
+    height: 3.2rem;
+  }
+  header .header-content .nav {
+    display: none;
+  }
+  header .header-content .options-list {
+    display: flex;
+  }
+  header .header-content .options-list .options-item:nth-child(1) {
+    display: none;
+  }
+  header .header-content .options-list .options-item.menu {
+    display: flex;
+  }
+  header .header-content .options-list .options-item .options-link img {
+    width: 20px;
+    filter: brightness(0) saturate(100%);
+  }
+}
+footer {
+  background-color: #FBB03B;
+  line-height: 2.1;
+  color: #FFFFFF;
+}
+footer .footer-wrap {
+  display: flex;
+}
+footer .footer-wrap a {
+  color: #FFFFFF;
+}
+footer .footer-wrap .footer-left, footer .footer-wrap .footer-right {
+  padding: 4rem 0 5rem;
+  font-size: 1.4rem;
+}
+footer .footer-wrap .footer-left {
+  width: 45%;
+  padding-left: 1rem;
+}
+footer .footer-wrap .footer-left .logo-footer {
+  width: auto;
+}
+footer .footer-wrap .footer-left .social-list {
+  display: flex;
+}
+footer .footer-wrap .footer-left .social-list .social-item {
+  padding: 5.6rem 1rem 0 1rem;
+}
+footer .footer-wrap .footer-right {
+  width: 55%;
+  display: flex;
+}
+footer .footer-wrap .footer-right .footer-item {
+  padding-right: 6.8rem;
+}
+footer .footer-wrap .footer-right .footer-item .footer-title {
+  font-size: 1.6rem;
+  padding-bottom: 1.8rem;
+}
+footer .design-by {
+  padding: 2.4rem 0;
+  border-top: 0.1rem solid #FFFFFF;
+}
+
+@media screen and (max-width: 376px) {
+  footer .footer-wrap {
+    flex-direction: column;
+  }
+  footer .footer-wrap .footer-left, footer .footer-wrap .footer-right {
+    width: 100%;
+    padding: 2.9rem 0 1.9rem;
+  }
+  footer .footer-wrap .footer-left .social-list {
+    display: none;
+  }
+  footer .footer-right {
+    flex-direction: column;
+  }
+  footer .footer-right .footer-item {
+    padding-bottom: 2.4rem;
+  }
+  footer .footer-right .footer-item .footer-title {
+    padding-bottom: 0.8rem;
+  }
+}
+.benefit .banner-benefit {
+  display: flex;
+  position: absolute;
+  width: 80%;
+  border-top-right-radius: 10rem;
+  background-color: #FFFFFF;
+  padding: 3.4rem;
+  bottom: 0;
+  padding-left: 15%;
+}
+.benefit .banner-benefit .benefit-horizontal {
+  display: flex;
+  flex-direction: row;
+}
+.benefit .banner-benefit .benefit-horizontal .benefit-img {
+  width: 3.6rem;
+  height: 3.6rem;
+  margin-right: 1.5rem;
+}
+.benefit .banner-benefit .benefit-content .benefit-title {
+  font-size: 1.4rem;
+}
+
+@media screen and (max-width: 376px) {
+  .benefit .banner-benefit {
+    display: none;
+  }
+}
+.product {
+  position: relative;
+}
+.product .product-title {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 300;
+  color: #333333;
+}
+.product .product-price {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: #333333;
+}
+.product .product-price-price {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: #333333;
+}
+.product .product-price-sale {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3;
+  color: #FF0000;
+}
+.product .product-price.original {
+  color: #CECECE;
+  float: right;
+}
+.product.onsale .badge {
+  top: 3rem;
+  left: 2.6rem;
+}
+
+@media screen and (max-width: 376px) {
+  .product .product-title {
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+  .product .product-price {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .product .product-price-sale {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .product.onsale .badge {
+    top: 1.4rem;
+    left: 0.9rem;
+  }
+}
+.btn {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 1.9;
+  padding: 1.4rem 3rem;
+  border-radius: 3.3rem;
+  text-align: center;
+  color: #333333;
+}
+.btn-default {
+  padding: 1.4rem 1.8rem;
+  background-color: #FFFFFF;
+}
+.btn-primary {
+  border: none;
+  padding: 0.8rem 3rem;
+  background-color: #FBB03B;
+}
+.btn-top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.btn-outline {
+  border: 0.1rem solid #E5E5E5;
+}
+
+@media screen and (max-width: 376px) {
+  .btn {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    padding: 0.2rem 0.5rem;
+  }
+  .btn-default {
+    padding: 0.3rem 0.9rem;
+  }
+  .btn-primary {
+    padding: 0.7rem 1.7rem;
+    font-size: 1.3rem;
+  }
+  .btn-top-right {
+    top: 1.4rem;
+    right: 2.4rem;
+  }
+}
+.badge {
+  position: absolute;
+  width: 6rem;
+  padding: 0.6rem 1rem;
+  border-radius: 2rem;
+  text-align: center;
+}
+.badge-danger {
+  color: #FFFFFF;
+  background-color: #FF0000;
+}
+
+@media screen and (max-width: 376px) {
+  .badge {
+    width: 3.4rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.9rem;
+  }
+}
+.section {
+  padding-top: 4.8rem;
+  padding-bottom: 6rem;
+}
+.section.section-banner {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 7rem;
+}
+.section.section-banner .banner .banner-content {
+  width: 30%;
+  position: absolute;
+  top: 22.2rem;
+  left: 24rem;
+  color: #FFFFFF;
+}
+.section.section-banner .banner .banner-content .banner-title {
+  font-size: 7.2rem;
+  width: 100%;
+  line-height: 1.5;
+  font-style: normal;
+  font-weight: bold;
+  margin-bottom: 2.4rem;
+}
+.section.section-banner .banner .banner-content .banner-title .text-active {
+  color: #FBB03B;
+}
+.section.section-banner .banner .banner-content .banner-link {
+  display: flex;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+}
+.section.section-banner .banner .banner-content .banner-link img {
+  width: 3.6rem;
+  height: 3.6rem;
+  margin-right: 1rem;
+}
+.section.section-banner .banner::after {
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.section.section-banner .banner-content {
+  z-index: 10;
+}
+
+.section-collection .card-list .card-item {
+  position: relative;
+}
+.section-collection .card-list .card-item.onsale .badge {
+  top: 12.8rem;
+  left: 4rem;
+}
+.section-collection .card-list .card-item .overlay {
+  position: relative;
+}
+.section-collection .card-list .card-item .overlay::after {
+  position: absolute;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.5;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.section-collection .card-list .card-item .card-title {
+  position: absolute;
+  top: 15.8rem;
+  left: 4rem;
+  color: #FFFFFF;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 3.6rem;
+}
+.section-collection .card-list .card-item .btn-default.card-link {
+  position: absolute;
+  top: 23.8rem;
+  left: 4rem;
+}
+
+.section-product .wrap {
+  position: relative;
+}
+
+.section-title {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 3.2rem;
+  line-height: 4.8rem;
+  color: #333333;
+  margin-bottom: 4rem;
+}
+
+.section-benefit {
+  background-color: #F7F7F7;
+}
+.section-benefit .benefit-title {
+  font-size: 1.6rem;
+}
+.section-benefit .benefit-description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 2.1;
+  color: #808080;
+}
+.section-benefit .benefit-img {
+  width: 3.6rem;
+  height: 3.6rem;
+  margin-right: 1.5rem;
+}
+
+.section-subcribe {
+  position: relative;
+  padding: 0;
+}
+.section-subcribe .subcribe-img {
+  vertical-align: bottom;
+}
+.section-subcribe .wrap {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  top: 50%;
+  left: 12%;
+  transform: translateY(-50%);
+  z-index: 99;
+}
+.section-subcribe .wrap .subcribe-left {
+  width: 50%;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  color: #FFFFFF;
+  font-weight: 400;
+}
+.section-subcribe .wrap .form-input {
+  border: none;
+  padding: 1.4rem 6.4rem;
+  border-radius: 6.1rem;
+  background-color: #FFFFFF;
+  margin-right: 4rem;
+}
+
+.section-subcribe::after {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 376px) {
+  .section {
+    padding-top: 2.4rem;
+    padding-bottom: 2.8rem;
+  }
+  .section.section-banner {
+    padding-bottom: 0;
+  }
+  .section.section-banner .banner .banner-img {
+    content: url("../../images/home-banner.png");
+  }
+  .section.section-banner .banner .banner-content {
+    width: 70%;
+    top: 27.1rem;
+    left: 2.4rem;
+  }
+  .section.section-banner .banner .banner-content .banner-title {
+    font-size: 4.8rem;
+    line-height: 1.4;
+    margin-bottom: 2.2rem;
+  }
+  .section.section-banner .banner .banner-content .banner-link {
+    font-size: 1.4rem;
+  }
+
+  .section-collection .card-list .card-item.onsale .badge {
+    top: 12.3rem;
+    left: 1.6rem;
+  }
+  .section-collection .card-list .card-item.col-6 {
+    width: 100%;
+  }
+  .section-collection .card-list .card-item.col-3 {
+    width: 50%;
+  }
+  .section-collection .card-list .card-item .card-title {
+    top: 14rem;
+    left: 1.6rem;
+    font-size: 1.4rem;
+    line-height: 2.1;
+  }
+  .section-collection .card-list .card-item .btn-default.card-link {
+    top: 17.8rem;
+    left: 1.6rem;
+  }
+
+  .section-product .wrap .row .col-3 {
+    width: 50%;
+    margin-bottom: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    line-height: 2.7;
+    margin-bottom: 1.6rem;
+  }
+
+  .section-benefit .benefit-title {
+    font-size: 1.2rem;
+  }
+  .section-benefit .row {
+    flex-direction: column;
+  }
+  .section-benefit .row .col-3 {
+    width: 100%;
+    margin-bottom: 1.6rem;
+  }
+  .section-benefit .row .col-3 .benefit-vertical {
+    display: flex;
+  }
+  .section-benefit .row .col-3 .benefit-description {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .section-benefit .row .col-3 .benefit-img {
+    width: 6.8rem;
+    height: 6.8rem;
+    margin-right: 1.6rem;
+  }
+
+  .section-subcribe {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .section-subcribe .subcribe-img {
+    content: url("../../images/banner-subcriber-mb.png");
+    width: 100%;
+  }
+  .section-subcribe .wrap {
+    flex-direction: column;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+    text-align: left;
+    z-index: 99;
+  }
+  .section-subcribe .wrap .subcribe-left {
+    width: 100%;
+    padding-right: 10rem;
+    margin-top: 0.4rem;
+    font-size: 1.4rem;
+    line-height: 2;
+  }
+  .section-subcribe .wrap .form-input {
+    padding: 1.2rem 7.4rem;
+    margin-bottom: 1.6rem;
+  }
+}
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=style.css.map */

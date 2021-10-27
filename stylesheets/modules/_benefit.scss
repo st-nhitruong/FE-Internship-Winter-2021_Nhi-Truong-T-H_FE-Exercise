@@ -1,0 +1,34 @@
+@use "sass:map";
+.benefit {
+  .banner-benefit {
+    display: flex;
+    position: absolute;
+    width: 80%;
+    border-top-right-radius: 10rem;
+    background-color: map.get($color,"white");;
+    padding: 3.4rem;
+    bottom: 0;
+    padding-left: 15%;
+    .benefit-horizontal {
+      display: flex;
+      flex-direction: row;
+      .benefit-img {
+        width: 3.6rem;
+        height: 3.6rem;
+        margin-right: 1.5rem;
+      }
+    }
+    .benefit-content {
+      .benefit-title {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: map.get($breakpoints,"small")) {
+  .benefit {
+    .banner-benefit {
+      display: none;
+    }
+  }
+}

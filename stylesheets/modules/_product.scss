@@ -1,0 +1,60 @@
+@use "sass:map";
+.product {
+  position: relative;
+  .product-title {
+    font-size: map.get($font-size,"normal");
+    line-height: map.get($font-size,"xl");
+    font-weight: 300;
+    color: map.get($color,"black");
+  }
+  .product-price {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: map.get($color,"black");
+  }
+  .product-price-price {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: map.get($color,"black");
+  }
+  .product-price-sale {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 3;
+    color: #FF0000;
+  }
+  .product-price.original {
+    color: map.get($color,"grey-price-original");
+    float: right;
+  }
+  &.onsale {
+    .badge {
+      top: 3rem;
+      left: 2.6rem;
+    }
+  }
+}
+@media screen and (max-width: map.get($breakpoints,"small")) {
+  .product {
+    .product-title {
+      font-size: map.get($font-size,"xs");
+      line-height: 1.8;
+    }
+    .product-price {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    .product-price-sale {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    &.onsale {
+      .badge {
+        top: 1.4rem;
+        left: 0.9rem;
+      }
+    }
+  }
+}
