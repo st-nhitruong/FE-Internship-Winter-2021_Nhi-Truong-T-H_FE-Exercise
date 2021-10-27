@@ -18,6 +18,7 @@ function linkToCart() {
   $main.style.display = 'none';
   $footer.style.display = 'none';
   $cart.style.display = 'block';
+  renderProductsList();
 }
 function linkHome() {
   $cart.style.display = 'none';
