@@ -15,10 +15,10 @@ class Product {
 }
 
 const product_list = [];
-product1 = new Product("1", 'T-Shirt Summer Vibes', './images/image.png', 119.99, 30, 'white', 'XL');
-product2 = new Product("2", 'Loose Knit 3/4 Sleeve', './images/image-2.png', 199.99, 0, 'white', 'XL');
-product3 = new Product("3", 'Basic Slim Fit T-Shirt', './images/image-3.png', 79.99, 0, 'black', 'XL');
-product4 = new Product("4", 'Loose Textured T-Shirt', './images/image-4.png', 199.99, 0, 'black', 'L');
+product1 = new Product('1', 'T-Shirt Summer Vibes', './images/image.png', 119.99, 30, 'White', 'XL');
+product2 = new Product('2', 'Loose Knit 3/4 Sleeve', './images/image-2.png', 199.99, 0, 'White', 'XL');
+product3 = new Product('3', 'Basic Slim Fit T-Shirt', './images/image-3.png', 79.99, 0, 'Black', 'XL');
+product4 = new Product('4', 'Loose Textured T-Shirt', './images/image-4.png', 199.99, 0, 'Black', 'L');
 product_list.push(product1);
 product_list.push(product2);
 product_list.push(product3);
@@ -103,6 +103,28 @@ const renderListProductsSelected = () => {
     });
   });
 };
+// function renderListProductsSelected() {
+//   const $productsList = document.querySelector(".products-list");
+//   product_list.map(element => {
+//     return `<li class="col col-3">
+//               <div class="product onsale">
+//                 <a href="#">
+//                   <img src="${element.img}" class="product-img" alt="image-product">
+//                 </a>
+//                 <div class="product-content">
+//                   <h4 class="product-title">
+//                     <a href="#">${element.name}</a>
+//                   </h4>
+//                   <span class="product-price-sale">$89.99 ${element.price - (element.discount/100*element.price)}</span>
+//                   <span class="product-price original">${element.price}</span>
+//                 </div>
+//                 <span class="badge badge-danger">-${element.discount}%</span>
+//                 <div class="button-add-cart text-uppercase"><a href="#"> add cart </a></div>
+//               </div>
+//             </li>`
+            
+//   })
+// }
 
 const addProductToCart = (productData) => {
   const rawProducts = localStorage.getItem("bonhotam");
