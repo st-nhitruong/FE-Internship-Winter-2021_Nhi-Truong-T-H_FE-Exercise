@@ -103,6 +103,7 @@ const renderListProductsSelected = () => {
     });
   });
 };
+
 // function renderListProductsSelected() {
 //   const $productsList = document.querySelector('.products-list');
 //   var html = product_list.map(element => {
@@ -127,6 +128,16 @@ const renderListProductsSelected = () => {
 //   })
 //   $productsList.innerHTML = html.join('');
 // }
+function sumQty() {
+  const rawProducts = localStorage.getItem('bonhotam');
+  const productsList = rawProducts ? JSON.parse(rawProducts) : [];
+  const $sum_qty = document.querySelector('.badge-qty');
+  var sumQty = 0;
+  productsList.map(element => {
+    sumQty = sumQty + element.quantity;
+  })
+  $sum_qty.innerHTML = sumQty;
+}
 
 const addProductToCart = (productData) => {
   const rawProducts = localStorage.getItem('bonhotam');
@@ -141,7 +152,7 @@ const addProductToCart = (productData) => {
   localStorage.setItem('bonhotam', JSON.stringify(productsList));
   const $cart_total = document.querySelector('.total-cost-price');
   $cart_total.innerHTML ='$' + total();
+  sumQty();
 };
 
 renderListProductsSelected();
-
