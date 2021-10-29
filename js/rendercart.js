@@ -1,46 +1,54 @@
 
-
-var data = localStorage.getItem("bonhotam");
-if(data) { 
-  var convert = JSON.parse(data);
-}
-const $cart_total = document.querySelector(".total-cost-price");
+const $cart_total = document.querySelector('.total-cost-price');
 function total() {
   var total = 0;
-  convert.map(element => {
-    total = total + (element.price * element.quantity);
-  })
-  return total.toFixed(2);
+  var convert = localStorage.getItem('bonhotam') ? JSON.parse(localStorage.getItem('bonhotam')) : [];
+  if(convert.length === 0) {
+    return total.toFixed(2);
+  } 
+  else {
+    convert.map(element => {
+      total = total + (element.price * element.quantity);
+    })
+    return total.toFixed(2);
+  }
 }
 
 function renderProductsList() { 
-  const $cart_product = document.querySelector("tbody");
-  var html = convert.map(element => {
-    return  `<tr>
-              <td>
-                <img src="${element.img}" alt="" class="cart-img">
-              </td>
-              <td>
-                <div class="cart-product-info">
-                  <h3 class="cart-product-name">${element.name}</h3>
-                  <p class="cart-product-id">#${element.id}</p>
-                </div>
-              </td>
-              <td>${element.color}</td>
-              <td>${element.size}</td>
-              <td class="cart-product-amount">
-                <div class="amount">
-                  <button class="btn-decrease" onclick="decrement_qty(${element.id})">-</button>
-                  <input type="text" class="input-amount text-qty" value="${element.quantity}">
-                  <button class="btn-increase" onclick="increment_qty(${element.id})">+</button>
-                </div>
-              </td>
-              <td class="text-price">$${element.price}</td>
-              <td><button class="btn-remove" onclick="remove_cart(${element.id})">X</button></td>
-            </tr>
-            `    
-  });
-  $cart_product.innerHTML = html.join('');
+  const $cart_product = document.querySelector('tbody');
+  var convert = localStorage.getItem('bonhotam') ? JSON.parse(localStorage.getItem('bonhotam')) : [];
+  if(convert.length === 0) { 
+    var list = `<p class="text-conntent">Không có sản phẩm nào trong giỏ hàng!</p>`;
+    $cart_product.innerHTML = list;
+  }
+  else {
+    var html = convert.map(element => {
+      return  `<tr>
+                <td>
+                  <img src="${element.img}" alt="" class="cart-img">
+                </td>
+                <td>
+                  <div class="cart-product-info">
+                    <h3 class="cart-product-name">${element.name}</h3>
+                    <p class="cart-product-id">#${element.id}</p>
+                  </div>
+                </td>
+                <td>${element.color}</td>
+                <td>${element.size}</td>
+                <td class="cart-product-amount">
+                  <div class="amount">
+                    <button class="btn-decrease" onclick="decrement_qty(${element.id})">-</button>
+                    <input type="text" class="input-amount text-qty" value="${element.quantity}">
+                    <button class="btn-increase" onclick="increment_qty(${element.id})">+</button>
+                  </div>
+                </td>
+                <td class="text-price">$${element.price}</td>
+                <td><button class="btn-remove" onclick="remove_cart(${element.id})">X</button></td>
+              </tr>
+              `    
+    });
+    $cart_product.innerHTML = html.join('');
+  }
   // Object.keys(convert).map((key, index) =>{ 
   //   const $tr = document.createElement('tr');
   //   $cart_product.appendChild($tr);
@@ -118,36 +126,36 @@ function renderProductsList() {
 $cart_total.innerHTML ='$' + total();
 
 function increment_qty(id) {
+  var convert = JSON.parse(localStorage.getItem('bonhotam'));
   convert.map(element => {
     if (element.id == id) {
       element.quantity = element.quantity + 1;
-      if(element.quantity == 0) {
-        remove_cart(element.id);
-      }
     }
   })
-  localStorage.setItem("bonhotam", JSON.stringify(convert));
+  localStorage.setItem('bonhotam', JSON.stringify(convert));
   renderProductsList();
   $cart_total.innerHTML ='$' + total();
 }
 
 function decrement_qty(id) {
+  var convert = JSON.parse(localStorage.getItem('bonhotam'));
   convert.map(element => {
     if (element.id == id) {
       element.quantity = element.quantity - 1;
+      localStorage.setItem('bonhotam', JSON.stringify(convert));    
       if(element.quantity == 0) {
         remove_cart(element.id);
       }
+      renderProductsList();
+      $cart_total.innerHTML ='$' + total();
     }
   })
-  localStorage.setItem("bonhotam", JSON.stringify(convert));
-  renderProductsList();
-  $cart_total.innerHTML ='$' + total();
 }
 
 function remove_cart(id) {
+  var convert = JSON.parse(localStorage.getItem('bonhotam'));
   convert = convert.filter(product => product.id != id);
-  localStorage.setItem("bonhotam", JSON.stringify(convert));
+  localStorage.setItem('bonhotam', JSON.stringify(convert));
   renderProductsList();
   $cart_total.innerHTML ='$' + total();
 }

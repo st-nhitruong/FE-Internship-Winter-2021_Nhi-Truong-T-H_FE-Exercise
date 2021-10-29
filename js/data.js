@@ -27,86 +27,86 @@ product_list.push(product4);
 
 // Render list of products on homepage
 const renderListProductsSelected = () => {
-  const $productsList = document.querySelector(".products-list");
+  const $productsList = document.querySelector('.products-list');
   product_list.forEach((product) => {
-    const $li = document.createElement("li");
-    $li.classList.add("col");
-    $li.classList.add("col-3");
+    const $li = document.createElement('li');
+    $li.classList.add('col');
+    $li.classList.add('col-3');
     $productsList.appendChild($li);
 
-    const $div = document.createElement("div");
-    $div.classList.add("product");
+    const $div = document.createElement('div');
+    $div.classList.add('product');
     if(product.discount >0) {
-      $div.classList.add("onsale");
+      $div.classList.add('onsale');
     }
-    $div.setAttribute("data-id", product.id);
+    $div.setAttribute('data-id', product.id);
     $li.appendChild($div);
 
-    const $a = document.createElement("a");
+    const $a = document.createElement('a');
     $div.appendChild($a);
 
-    const $img = document.createElement("img");
-    $img.classList.add("product-img");
-    $img.setAttribute("alt", "image-product");
-    $img.setAttribute("src", product.img);
+    const $img = document.createElement('img');
+    $img.classList.add('product-img');
+    $img.setAttribute('alt', 'image-product');
+    $img.setAttribute('src', product.img);
     $a.appendChild($img);
 
-    const $div1 = document.createElement("div");
-    $div1.classList.add("product-content");
+    const $div1 = document.createElement('div');
+    $div1.classList.add('product-content');
     $div.appendChild($div1);
 
-    const $h4 = document.createElement("h4");
-    $h4.classList.add("product-title");
+    const $h4 = document.createElement('h4');
+    $h4.classList.add('product-title');
     $div1.appendChild($h4);
 
-    const $a1 = document.createElement("a");
+    const $a1 = document.createElement('a');
     $a1.innerHTML = product.name;
     $h4.appendChild($a1);
 
     if(product.discount >0) {
-      const $span = document.createElement("span");
-      $span.classList.add("product-price-sale");
+      const $span = document.createElement('span');
+      $span.classList.add('product-price-sale');
       $span.innerHTML = product.price;
       $div1.appendChild($span);
 
       const discount_price = product.price - (product.discount/100*product.price)
-      const $span1 = document.createElement("span");
-      $span1.classList.add("product-price");
-      $span1.classList.add("original");
+      const $span1 = document.createElement('span');
+      $span1.classList.add('product-price');
+      $span1.classList.add('original');
       $span1.innerHTML = discount_price;
       $div1.appendChild($span1);
 
-      const $span2 = document.createElement("span");
-      $span2.classList.add("badge");
-      $span2.classList.add("badge-danger");
+      const $span2 = document.createElement('span');
+      $span2.classList.add('badge');
+      $span2.classList.add('badge-danger');
       $span2.innerHTML = `-${product.discount}%`;
       $div.appendChild($span2);
     }else {
-      const $span = document.createElement("span");
-      $span.classList.add("product-price");
+      const $span = document.createElement('span');
+      $span.classList.add('product-price');
       $span.innerHTML = product.price;
       $div1.appendChild($span);
     }
 
-    const $button = document.createElement("div");
-    $button.classList.add("button-add-cart");
-    $button.classList.add("text-uppercase");
-    $button.innerHTML = "add to cart";
+    const $button = document.createElement('div');
+    $button.classList.add('button-add-cart');
+    $button.classList.add('text-uppercase');
+    $button.innerHTML = 'add to cart';
     $div.appendChild($button);
 
-    const $a2 = document.createElement("a");
+    const $a2 = document.createElement('a');
     $button.appendChild($a2);
 
 
-    $button.addEventListener("click", () => {
+    $button.addEventListener('click', () => {
       addProductToCart(product);
     });
   });
 };
 // function renderListProductsSelected() {
-//   const $productsList = document.querySelector(".products-list");
-//   product_list.map(element => {
-//     return `<li class="col col-3">
+//   const $productsList = document.querySelector('.products-list');
+//   var html = product_list.map(element => {
+//     return `<li class='col col-3'>
 //               <div class="product onsale">
 //                 <a href="#">
 //                   <img src="${element.img}" class="product-img" alt="image-product">
@@ -115,19 +115,21 @@ const renderListProductsSelected = () => {
 //                   <h4 class="product-title">
 //                     <a href="#">${element.name}</a>
 //                   </h4>
-//                   <span class="product-price-sale">$89.99 ${element.price - (element.discount/100*element.price)}</span>
-//                   <span class="product-price original">${element.price}</span>
+//                   ${element.discount > 0 ? `<span class="product-price-sale">$${element.price - (element.discount/100*element.price)}</span>
+//                                             <span class="product-price original">$${element.price}</span>`
+//                                             : 
+//                                             `<span class="product-price">$${element.price}</span>`}
 //                 </div>
-//                 <span class="badge badge-danger">-${element.discount}%</span>
-//                 <div class="button-add-cart text-uppercase"><a href="#"> add cart </a></div>
+//                 ${element.discount > 0 ? `<span class="badge badge-danger">-${element.discount}%</span>`: ''}
+//                 <div class="button-add-cart text-uppercase" onclick="addProductToCart(${element})"><a href="#"> add cart </a></div>
 //               </div>
-//             </li>`
-            
+//             </li>`    
 //   })
+//   $productsList.innerHTML = html.join('');
 // }
 
 const addProductToCart = (productData) => {
-  const rawProducts = localStorage.getItem("bonhotam");
+  const rawProducts = localStorage.getItem('bonhotam');
   const productsList = rawProducts ? JSON.parse(rawProducts) : [];
   const existingProduct = productsList.find((product) => product.id === productData.id);
   if (existingProduct) {
@@ -136,7 +138,10 @@ const addProductToCart = (productData) => {
     productData.quantity = 1;
     productsList.push(productData);
   }
-  localStorage.setItem("bonhotam", JSON.stringify(productsList));
+  localStorage.setItem('bonhotam', JSON.stringify(productsList));
+  const $cart_total = document.querySelector('.total-cost-price');
+  $cart_total.innerHTML ='$' + total();
 };
 
 renderListProductsSelected();
+
